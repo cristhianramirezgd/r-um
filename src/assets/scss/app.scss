@@ -70,8 +70,10 @@
 // global styles
 @import 'global/app-dashboard';
 @import 'global/layout';
+@import 'global/helpers';
+@import 'global/containers';
+@import 'global/fixes';
 
 // custom components
 @import 'components/navigation/main-nav';
-
 @import 'components/footer';
