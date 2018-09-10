@@ -1,0 +1,12 @@
+.bg{
+	&-primary{background:$primary-color;}
+	&-secondary{background:$secondary-color;}
+	&-success{background: $success-color;}
+	&-warning{background:$warning-color;}
+	&-alert{background:$alert-color;}
+	&-light-gray{background:$light-gray;}
+	&-medium-gray{background:$medium-gray;}
+	&-dark-gray{background:$dark-gray;}
+	&-black{background:$black;}
+	&-white{background:$white;}
+}

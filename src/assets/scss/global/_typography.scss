@@ -1,0 +1,17 @@
+.text{
+	&-primary{color:$primary-color;}
+	&-secondary{color:$secondary-color;}
+	&-success{color: $success-color;}
+	&-warning{color:$warning-color;}
+	&-alert{color:$alert-color;}
+	&-light-gray{color:$light-gray;}
+	&-medium-gray{color:$medium-gray;}
+	&-dark-gray{color:$dark-gray;}
+	&-black{color:$black;}
+	&-white{color:$white;}
+}
+a{
+	&:hover{
+		color:$warning-color;
+	}
+}
