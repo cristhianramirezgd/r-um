@@ -94,3 +94,10 @@ $('[data-app-dashboard-toggle-shrink]').on('click', function(e) {
   e.preventDefault();
   $(this).parents('.app-dashboard').toggleClass('shrink-medium').toggleClass('shrink-large');
 });
+// carousel topbar
+$('.topbarslide').slick({
+    speed: 8000,
+    autoplay: true,
+    swipeToSlide:true,
+    focusOnSelect: true
+});
