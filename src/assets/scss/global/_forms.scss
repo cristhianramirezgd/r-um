@@ -1,0 +1,26 @@
+.formsearchcontainer{
+	.searchformum{
+		display: flex;
+		.input_buscar{
+			border:rem-calc(4px) solid $alert-color;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			margin-bottom:0;
+			&:focus{
+				color:$dark-gray;
+				border-width:rem-calc(2px);
+			}
+		}
+		.searchbutton{
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			color:$white;
+			font-weight: 600;
+			margin: 0 2px 0 0;
+		}
+		a{
+			margin-bottom:0;
+			margin: 0 2px;
+		}
+	}
+}
