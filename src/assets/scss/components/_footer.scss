@@ -1,0 +1,21 @@
+footer{
+	.site-map-um{
+		display:flex;
+		flex-wrap: wrap;
+		ul{
+			margin:0 $global-margin/2;
+		}
+	}
+	&>div{
+		padding:$global-padding/2;
+		@include breakpoint(large ) {	
+		padding:$global-padding 0;
+		}
+	}
+	a{
+		color:$white;
+		&:hover{
+			opacity: .8;
+		}
+	}
+}

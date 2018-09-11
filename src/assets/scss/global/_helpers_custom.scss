@@ -10,3 +10,19 @@
 	&-black{background:$black;}
 	&-white{background:$white;}
 }
+.border{
+	@include breakpoint(large ) {
+		&-top{
+			border-top:1px solid $white;
+		}
+		&-right{
+			border-right:1px solid $white;
+		}
+		&-bottom{
+			border-bottom:1px solid $white;
+		}
+		&-left{
+			border-left:1px solid $white;
+		}
+	}
+}
