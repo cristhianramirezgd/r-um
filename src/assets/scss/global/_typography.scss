@@ -8,7 +8,7 @@
 	&-medium-gray{color:$medium-gray;}
 	&-dark-gray{color:$dark-gray;}
 	&-black{color:$black;}
-	&-white{color:$white;}
+	&-white{color:$white!important;}
 }
 a{
 	&:hover{
