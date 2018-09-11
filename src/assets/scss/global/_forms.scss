@@ -7,6 +7,7 @@
 			border-bottom-right-radius: 0;
 			margin-bottom:0;
 			height: 2.6375rem;
+			color:$medium-gray;
 			&:focus{
 				color:$dark-gray;
 				border-width:rem-calc(2px);
@@ -24,4 +25,93 @@
 			margin: 0 2px;
 		}
 	}
+}
+// cart
+.cart-icon {
+  margin: 0;
+}
+// #cartinfo_qty {}
+#cartinfo_value {
+  margin: 0 $global-margin/2;
+	font-size: .8rem;
+}
+.um-car-icon {
+  position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding:$global-padding/2 0;
+}
+// card item
+#div_contenido_cart {
+	position:absolute;
+	border:1px solid transparent;
+	top:-500px;
+	left:-500px;
+	max-height:200px;
+	min-height:20px;
+	width:200px;
+	z-index:200;
+	background-color:transparent;
+	width:400px;
+}
+#div_contenido_cart_info {
+  background: $white;
+  box-shadow: 0px 1px 3px rgba($black,.2);
+  ul{
+    background: $white;
+    box-shadow: 0px 1px 3px rgba($black,.2);
+    list-style:none;
+    margin: 0;
+     li {
+      font-size: .7rem;
+      display: flex;
+			align-items: center;
+			padding: $global-padding/2;
+			justify-content: space-between;
+       a {
+      	font-size: .7rem;
+      	display: flex;
+      	justify-items: center;
+      	align-items: center;
+      	br{
+      		display:none;
+      	}
+      }
+    }
+  }
+  img{
+    width:rem-calc(70px);
+    height:auto;
+    padding:$global-padding;
+    border: 1px solid $light-gray;
+    margin: 0 $global-margin 0 0;
+  }
+}
+#div_contenido_cart_boton {
+	.button_def{
+	  display: inline-block;
+	  vertical-align: middle;
+	  margin: 0 0 1rem 0;
+	  font-family: inherit;
+	  padding: 0.85em 1em;
+	  -webkit-appearance: none;
+	  border: 1px solid transparent;
+	  border-radius: 0.1875rem;
+	  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+	  font-size: 0.9rem;
+	  line-height: 1;
+	  text-align: center;
+	  cursor: pointer;
+	  background-color: $alert-color;
+	  color: $white;
+	  &:hover{
+	  	background-color: scale-color($alert-color, $lightness: -14%);
+	  }
+	}
+}
+#div_contenido_cart_boton {
+  padding-top:$global-padding;
+  background: $white;
+  box-shadow: 0px 1px 3px rgba($black,.2);
 }
