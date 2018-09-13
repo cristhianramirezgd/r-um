@@ -117,3 +117,108 @@ a.listname {
 	  	}
 	}
 }
+// vitrina producto 2
+.dpr_container {
+  border: 1px solid $light-gray;
+  margin-bottom: $global-margin;
+  position:relative;
+  overflow:hidden;
+   a{
+    color:black;
+  }
+  &:hover {
+  img{
+      transition: all 69ms ease-in;
+      transform:scale(1.1);
+    }
+  }
+}
+.dpr_listname {
+  img{
+    margin:0 auto;
+    display: block;
+
+  }
+}
+.dpr_prod_quick_view{
+  color:$light-gray;
+  padding: $global-padding;
+}
+.dpr_product-name{
+  font-weight: 600;
+  padding-left: $global-padding;
+  border-left: 3px solid $alert-color;
+}
+.dpr_in_stock{
+  background: $success-color;
+  color: $white;
+  padding: 3px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: $global-padding;
+}
+.dpr_listprice{
+  padding: $global-padding;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+   
+.dpr_product-list-add-button {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:$global-padding;
+    select {
+        padding: 0 10px;
+        height: 30px;
+        width:30px;
+        font-size: .7rem;
+      }
+  }
+.dpr_product-list-add-button {
+      .button_def.button_prod_add {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 0 $global-margin 0;
+          font-family: inherit;
+          padding: 0.85em 1em;
+          -webkit-appearance: none;
+          border: 1px solid transparent;
+          border-radius: 0.1875rem;
+          transition: background-color 0.25s ease-out, color 0.25s ease-out;
+          font-size: 0.9rem;
+          font-weight: 700;
+          line-height: 1;
+          text-align: center;
+          cursor: pointer;
+          background-color: $alert-color;
+          color: $white;
+          &:hover{
+            background:scale-color($alert-color, $lightness: -14%);
+          }
+    }
+  }
+  .prod_compare {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0 0 1rem;
+    input {
+            margin: 0;
+          }
+  }
+.group-home {
+  .container_div{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:$global-padding;
+    justify-content:space-around;
+    @include breakpoint(medium) {
+      grid-template-columns:1fr 1fr 1fr;
+    }
+    @include breakpoint(large) {
+      grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+  }
+}
