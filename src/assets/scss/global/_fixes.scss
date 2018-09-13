@@ -14,3 +14,32 @@
 .badge.warning{
 	color:$white;
 }
+// home group title
+main.home_um{
+	#tpl_titulo {
+	  display: none;
+	}
+}
+// back to top
+#back-top {
+$size: 48px;
+  height: $size;
+  width: $size;
+  background: $alert-color;
+  z-index: 7;
+  position: fixed;
+  right: 10px;
+  bottom: 30vh;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  &:before {
+    content: '>';
+    transform: rotate(-90deg);
+    display: block;
+    font-size: 3.8rem;
+    margin-top: -28px;
+    margin-left: -4px;
+    color: $white;
+  }
+}
