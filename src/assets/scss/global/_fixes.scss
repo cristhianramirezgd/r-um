@@ -43,3 +43,17 @@ $size: 48px;
     color: $white;
   }
 }
+// product table fixes
+.hr1 {
+  display: none;
+}
+table.product_list_table tr:last-child {
+  display: none;
+}
+
+table.product_list_table td {
+  background: white;
+}
+table.container_table tbody {
+  border: 0;
+}
