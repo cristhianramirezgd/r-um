@@ -1,0 +1,119 @@
+// vitrinas
+.prod_quick_view{
+	color:$medium-gray;
+  padding: $global-padding;
+}
+a.listname {
+  color: $black;
+  :hover {
+    color: $dark-gray;
+    img {
+        transform: scale(1.1);
+      }
+  }
+	img {
+    transition: all 69ms ease-in;
+  }
+}
+.product_list_table tr td {
+	max-width: 100%;
+	width: 100%;
+  @include breakpoint(medium) {
+  	max-width: 50%;
+  	width: 50%;
+  }
+  @include breakpoint(large) {
+  	max-width: 25%;
+  	width: 25%;
+  }
+}
+.product-name {
+  font-weight: 600;
+  padding-left: $global-padding;
+  border-left: 3px solid $alert-color;
+}
+.listprice {
+  padding: $global-padding;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.prod_top{
+	background-color: $white!important;
+	&>td {
+	  border-top: 1px solid $light-gray;
+	  border-left: 1px solid $light-gray;
+	  border-right: 1px solid $light-gray;
+	}
+}
+.prod_bottom {
+  background-color: $white!important;
+  &>td {
+    border-bottom: 1px solid $light-gray;
+    border-left: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+  }
+}
+.prod_bottom td {
+  position: relative;
+}
+.in_stock {
+  background: $success-color;
+  color: $white;
+  padding: 3px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: $global-padding;
+}
+
+.product-list-add-button {
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:1rem;
+	select {
+		$size: rem-calc(30px);
+	  padding: 0 10px;
+	  height: $size;
+	  width:$size;
+	  font-size: .7rem;
+	}
+	.button_def.button_prod_add {
+	  display: inline-block;
+	  vertical-align: middle;
+	  margin: 0 0 1rem 0;
+	  font-family: inherit;
+	  padding: 0.85em 1em;
+	  -webkit-appearance: none;
+	  border: 1px solid transparent;
+	  border-radius: 0.1875rem;
+	  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+	  font-size: 0.9rem;
+	  font-weight: 700;
+	  line-height: 1;
+	  text-align: center;
+	  cursor: pointer;
+	  background-color: $alert-color;
+	  color: $white;
+	  &:hover{
+			background:scale-color($alert-color, $lightness: -14%);
+	  }
+	}
+	// &:hover {
+	// 	.button_def.button_prod_add {
+	// 		  background: $alert-color;
+	// 		}
+	// }
+	.product-list-add-button br {
+	  display: none;
+	}
+	.prod_compare {
+	  display: flex;
+	  justify-content: space-around;
+	  align-items: center;
+	  padding: 0 $global-padding;
+	  input {
+	  	  margin: 0;
+	  	}
+	}
+}
