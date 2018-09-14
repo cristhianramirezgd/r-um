@@ -117,6 +117,146 @@ a.listname {
 	  	}
 	}
 }
+// vitrina home
+.banner-one, .banner-two {
+  >div{
+  	min-height: rem-calc(520px);
+  	overflow: hidden;
+  }
+  .gr_name {
+    display: none;
+  }
+}
+.group-home{
+	.container_div{
+		display:grid;
+		justify-content:space-around;
+		position:relative;
+		grid-template-columns:1fr 1fr;
+		@include breakpoint(large) {
+		  grid-template-columns:1fr 1fr 1fr;
+		}
+		.dpr_container{
+			position:relative;
+			min-height: rem-calc(260px);
+			overflow: hidden;
+			transition:all 90ms ease-in;
+			&>div {
+			  text-align: center;
+			}
+			.dpr_listname{
+				text-align:center;
+				.dpr_prod_quick_view {
+				  padding: $global-padding 0;
+				  font-size:.8rem; 
+				}
+				.dpr_imagen_thumb{
+						position: absolute;
+					  top: 0;
+					  right: 0;
+					  left: 0;
+					  bottom:0;
+					  z-index: -1;
+					  width: 100%;
+					  margin: 0 auto;
+					  background: $white;
+					  img{
+					  	width:100%;
+					  	object-fit: scale-down;
+					  	object-position: center;
+					  }
+				}
+			}
+			&:hover{
+				box-shadow: 1px 1px 10px rgba($dark-gray,.2);
+				.prod_compare,
+				.dpr_product-list-add-button,
+				.dpr_in_stock,
+				.dpr_listprice,
+				.dpr_prod_quick_view,
+				.dpr_product-name {
+					transition: all 150ms ease-in-out;
+					opacity: 1;
+					transform: translateY(0);
+				}
+			  img{
+			  	opacity: .2;
+			  	filter: blur(4px);
+			  }
+			}
+			.prod_compare {
+			  display: none;
+			}
+			.dpr_in_stock {
+				margin-top:$global-margin;
+			  background: rgba($black,.8);
+			  color: $white;
+			}
+		}
+	}
+	.dpr_product-list-add-button{
+		$size:rem-calc(30px);
+		  display:flex;
+			  justify-content:space-between;
+			  align-items:center;
+			  padding:$global-padding;
+			    select {
+			        padding: 0 rem-calc(10px);
+			        height: $size;
+			        width:$size;
+			        font-size: .7rem;
+			        margin:0;
+			      }
+			.button_def {
+				display: inline-block;
+				vertical-align: middle;
+				font-family: inherit;
+				padding: 0.85em 1em;
+				-webkit-appearance: none;
+				border: 1px solid transparent;
+				border-radius: 0.1875rem;
+				transition: background-color 0.25s ease-out, color 0.25s ease-out;
+				font-size: 0.9rem;
+				font-weight: 700;
+				line-height: 1;
+				text-align: center;
+				cursor: pointer;
+				background-color: $alert-color;
+				color: $white;
+				&:hover{
+				  background:scale-color($alert-color, $lightness: -14%);
+				}
+		}
+	}
+	.prod_compare,
+	.dpr_product-list-add-button,
+	.dpr_in_stock,
+	.dpr_listprice,
+	.dpr_prod_quick_view,
+	.dpr_product-name {
+	  font-size: .9rem;
+	  color: black;
+	  font-weight: 700;
+	  opacity: 0;
+	  opacity: 0;
+	  transform: translateY(100px);
+	}
+	.dpr_listprice{
+		padding-top:$global-padding;
+	}
+}
+// quick view home
+button.ui-dialog-titlebar-close {
+  color: $alert-color;
+  background: $alert-color;
+  border-radius: 100%;
+  &:after {
+    content: 'x';
+    color: $white;
+    font-weight: 600;
+  }
+}
+
 // vitrina producto 2
 .group_shield{
 	  .container_div{
@@ -184,9 +324,10 @@ a.listname {
 	  align-items:center;
 	  padding:$global-padding;
 	    select {
+	    	$size:rem-calc(30px);
 	        padding: 0 10px;
-	        height: 30px;
-	        width:30px;
+	        height: $size;
+	        width:$size;
 	        font-size: .7rem;
 	      }
 	  }
