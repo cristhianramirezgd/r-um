@@ -116,3 +116,95 @@
   background: $white;
   box-shadow: 0px 1px 3px rgba($black,.2);
 }
+// Newsleter form
+.newsletterform{
+		#successDiv_1{
+			color:$success-color;
+			font-size: 1.3rem;
+			background: $white;
+			padding: $global-padding;
+			border-radius: $global-radius;
+		}
+		#formulario_1{
+			ul.ul_formulario {
+			  list-style: none;
+			  li#li_forma_1 {
+			  	input {
+			    border: 0.25rem solid $alert-color;
+			    border-top-right-radius: 0;
+			    border-bottom-right-radius: 0;
+			    color: $medium-gray;
+			  	}
+			  	p {
+  				  display:none;
+  				}
+  				label {
+			  		text-align:right;
+			  		line-height:1;
+			  		color:$alert-color;
+					}
+				}
+			}
+			li#li_forma_2{
+				 p{
+				  margin-bottom:0;
+				}
+				#para_checkbox_2{
+				  display: flex;
+				  justify-content: space-around;
+				  align-items: center;
+				  padding: 0 $global-padding;
+				  @include breakpoint(large) {
+				  	padding: 0 $global-padding*6;
+				  }
+				 }
+				 #para_checkbox_2{
+				 	 input{
+			 			  margin: 0;
+			 			}
+			 			br{
+			 			  display:none;
+			 			}
+				 }
+			}
+		}
+		input#submit_button_1 {
+		    display: inline-block;
+		    vertical-align: middle;
+		    margin: 0 0 $global-margin 0;
+		    font-family: inherit;
+		    padding: 0.85em $global-padding;
+		    -webkit-appearance: none;
+		    border: rem-calc(1px) solid transparent;
+		    border-radius: $global-radius;
+		    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+		    font-size: 0.9rem;
+		    font-weight: 700;
+		    line-height: 1;
+		    text-align: center;
+		    cursor: pointer;
+		    background-color: $alert-color;
+		    color: $white;
+		    width:100%;
+		    &:hover{
+		    	background:scale-color($alert-color, $lightness: -14%);
+		    }
+		}
+		li#li_forma_4 {
+		  font-size: .7rem;
+		  margin-top:$global-margin;
+		  label{
+  		  text-align: right;
+  		  line-height: 1;
+  		  color: #ff5722;
+  		  margin-bottom:-($global-margin);
+  		}
+  		p{
+  				  display:none;
+  				}
+	input{
+			  font-size: initial;
+			  margin-right:$global-margin;
+			}
+		}
+}
