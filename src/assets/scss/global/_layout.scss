@@ -8,3 +8,80 @@
 .top-brand-carousel {
   padding: 0 $global-padding $global-padding;
 }
+#tpl_sort_by {
+  @include breakpoint(large) {
+  	width: 40%;
+  }
+  span{
+    background:$medium-gray;
+    padding:$global-padding;
+    vertical-align:middle;
+    border-radius:3px;
+    font-weight:600;
+    color:$white;
+    select{
+      margin-top:$global-margin;
+      width:auto;
+    }
+  }
+}
+// component autocomplete search
+ul#ui-id-1 {
+  overflow-y: scroll;
+  max-height: 60vh;
+  padding: 0 $global-padding/2;
+  @include breakpoint(large) {
+  	max-height: 50vh;
+  	padding: 0 $global-padding*2;
+  }
+  background:rgba($white,.7);
+}
+.ui-menu .ui-menu-item-wrapper {
+  padding: 0 1rem;
+  margin: 0;
+}
+.ui-state-active {
+  border: 0!important;
+  background: transparent!important;
+  color:$black!important;
+  font-size: .8rem!important;
+}
+li.ui-menu-item{
+	border-bottom: rem-calc(1px) solid $medium-gray;
+	padding: rem-calc(2px) 0;
+	transition:all 120ms ease-in;
+	background: $white;
+	@include breakpoint(large) {
+		&:hover,&:focus {
+		  transform:scale(1.1);
+		  border-radius: $global-padding*2;
+		  box-shadow: 1px 1px 10px rgba($dark-gray,.2);
+		  a{
+		  	background:$white;
+		  	color:$dark-gray;
+		  }
+		}
+	}
+ a {
+   font-size:.7rem;
+   align-items: center;
+   width: 100%;
+   display: block;
+   color:$black;
+		.autocomplete_image {
+			$size:rem-calc(50px);
+		  max-width: $size;
+		  max-height: $size;
+		  border-radius: 100%;
+		  border: rem-calc(1px) solid $alert-color;
+		  margin:0 auto;
+		  display: inline-block;
+		}
+		.title_autocomplete {
+		  margin-left: $global-margin;
+		  margin-top: $global-margin;
+		  font-weight: 600;
+		  display: inline-block;
+		}
+ }
+}
