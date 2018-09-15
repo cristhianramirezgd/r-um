@@ -28,6 +28,8 @@ main.home_um{
 $size: 48px;
   height: $size;
   width: $size;
+  font-size: 2rem;
+  text-align:center;
   background: $alert-color;
   z-index: 7;
   position: fixed;
@@ -36,15 +38,9 @@ $size: 48px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 1px 1px 1px rgba(0,0,0,.5);
-  &:before {
-    content: '>';
-    transform: rotate(-90deg);
-    display: block;
-    font-size: 3.8rem;
-    margin-top: -28px;
-    margin-left: -4px;
-    color: $white;
-  }
+	i{
+	padding:$global-padding/2;
+	}
 }
 // product table fixes
 .hr1 {
