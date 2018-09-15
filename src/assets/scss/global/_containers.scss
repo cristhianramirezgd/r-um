@@ -99,11 +99,6 @@ a.listname {
 			background:scale-color($alert-color, $lightness: -14%);
 	  }
 	}
-	// &:hover {
-	// 	.button_def.button_prod_add {
-	// 		  background: $alert-color;
-	// 		}
-	// }
 	.product-list-add-button br {
 	  display: none;
 	}
@@ -141,6 +136,11 @@ a.listname {
 			min-height: rem-calc(260px);
 			overflow: hidden;
 			transition:all 90ms ease-in;
+			@include breakpoint(medium down) {
+				background: $white;
+				margin-bottom: $global-margin;
+				border: 1px solid $light-gray;
+			}
 			&>div {
 			  text-align: center;
 			}
@@ -151,7 +151,9 @@ a.listname {
 				  font-size:.8rem; 
 				}
 				.dpr_imagen_thumb{
-						position: absolute;
+						@include breakpoint(large) {
+							position: absolute;
+						}
 					  top: 0;
 					  right: 0;
 					  left: 0;
@@ -169,23 +171,31 @@ a.listname {
 			}
 			&:hover{
 				box-shadow: 1px 1px 10px rgba($dark-gray,.2);
+				.dpr_suggested_price,
 				.prod_compare,
 				.dpr_product-list-add-button,
 				.dpr_in_stock,
 				.dpr_listprice,
 				.dpr_prod_quick_view,
 				.dpr_product-name {
-					transition: all 150ms ease-in-out;
-					opacity: 1;
-					transform: translateY(0);
+					@include breakpoint(large) {
+						transition: all 150ms ease-in-out;
+						opacity: 1;
+						transform: translateY(0);
+					}
 				}
 			  img{
 			  	opacity: .2;
-			  	filter: blur(4px);
+			  	@include breakpoint(large) {
+			  		filter: blur(4px);
+			  	}
 			  }
 			}
 			.prod_compare {
-			  display: none;
+				font-size: .8rem;
+				@include breakpoint(large) {
+			  	display: none;
+				}
 			}
 			.dpr_in_stock {
 				margin-top:$global-margin;
@@ -193,6 +203,20 @@ a.listname {
 			  color: $white;
 			}
 		}
+	}
+	.dpr_suggested_price{
+		font-size: .8rem!important;
+		text-decoration: line-through;
+		padding:$global-padding 0 0 0;
+		color:$dark-gray !important;
+	}
+	.wrapper-ribbon {
+	  position: absolute;
+	  background: $alert-color;
+	  padding: 4px;
+	  color: $white!important;
+	  font-weight: bold;
+	  z-index: 1;
 	}
 	.dpr_product-list-add-button{
 		$size:rem-calc(30px);
@@ -228,6 +252,7 @@ a.listname {
 				}
 		}
 	}
+	.dpr_suggested_price,
 	.prod_compare,
 	.dpr_product-list-add-button,
 	.dpr_in_stock,
@@ -237,12 +262,21 @@ a.listname {
 	  font-size: .9rem;
 	  color: black;
 	  font-weight: 700;
-	  opacity: 0;
-	  opacity: 0;
-	  transform: translateY(100px);
+	  @include breakpoint(large) {
+	  	opacity: 0;
+	  	transform: translateY(100px);
+	  }
+	}
+	.dpr_product-name{
+		overflow: hidden;
+		line-height: 1.2;
+		text-transform: lowercase;
+			&::first-letter{
+				text-transform: capitalize;
+			}
 	}
 	.dpr_listprice{
-		padding-top:$global-padding;
+		padding-top:0 0 $global-padding;
 	}
 }
 // quick view home
