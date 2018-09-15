@@ -259,24 +259,18 @@ button.ui-dialog-titlebar-close {
 
 // vitrina producto 2
 .group_shield{
-	  .container_div{
-	    display:grid;
-	    grid-template-columns:1fr 1fr;
-	    grid-gap:$global-padding;
-	    justify-content:space-around;
-	    @include breakpoint(medium) {
-	      grid-template-columns:1fr 1fr 1fr;
-	    }
-	    @include breakpoint(large) {
-	      grid-template-columns:1fr 1fr 1fr 1fr;
-	    }
-	  }
 	.dpr_container {
+		transition: all 69ms ease-in;
 	  border: 1px solid $light-gray;
 	  margin-bottom: $global-margin;
 	  position:relative;
 	  overflow:hidden;
 	  background-color: $white;
+	  float:left;
+	  width: 50%;
+	  @include breakpoint(large) {
+	  	max-width: 25%;
+	  }
 	   a{
 	    color:black;
 	  }
@@ -285,7 +279,27 @@ button.ui-dialog-titlebar-close {
 	      transition: all 69ms ease-in;
 	      transform:scale(1.1);
 	    }
+	    .dpr_product-name{
+	    	color:$warning-color;
+	    }
+	    @include breakpoint(large) {
+	    	box-shadow: 1px 1px 10px rgba($dark-gray,.2);
+	    	z-index:1;
+	    	transform: translateY(-2px);
+	    	.button_def.button_prod_add,
+	    	.dpr_product-list-add-button select,
+	    	.dpr_product-list-add-button::before {
+	    		opacity:1;
+	    		transform: translatex(0);
+	    	}
+	    }
+	    .dpr_prod_quick_view{
+	    	color:$dark-gray;
+	    }
 	  }
+	}
+	.dpr_imagen_thumb {
+	  overflow: hidden;
 	}
 	.dpr_listname {
 	  img{
@@ -295,43 +309,89 @@ button.ui-dialog-titlebar-close {
 	  }
 	}
 	.dpr_prod_quick_view{
-	  color:$light-gray;
-	  padding: $global-padding;
+		transition: all 0.25s ease-out;
+	  color:$medium-gray;
+	  padding:$global-padding/3 $global-padding;
 	}
 	.dpr_product-name{
 	  font-weight: 600;
-	  padding-left: $global-padding;
+	  padding:0 $global-padding;
 	  border-left: 3px solid $alert-color;
+	  height: 41px;
+	  @include breakpoint(large) {
+	  	height: 49px;
+	  }
+	  overflow: hidden;
+	  line-height: 1.2;
+	  text-transform: lowercase;
+	  	&::first-letter{
+	  		text-transform: capitalize;
+	  	}
+	  @include breakpoint(large) {
+	  	font-size: rem-calc(14px)
+	  }
 	}
 	.dpr_in_stock{
 	  background: $success-color;
 	  color: $white;
 	  padding: 3px;
-	  border-radius: 10px;
 	  position: absolute;
 	  top: 0;
-	  right: $global-padding;
+	  right:0;
+	}
+	.wrapper-ribbon {
+	  position: absolute;
+	  background: $alert-color;
+	  padding: 4px;
+	  color: white;
+	  font-weight: bold;
+	  z-index: 1;
+	}
+	.dpr_suggested_price {
+	  font-size: .8rem;
+	  text-decoration: line-through;
+	  padding: 0 $global-padding;
+	  color:$dark-gray;
 	}
 	.dpr_listprice{
-	  padding: $global-padding;
+	  padding: 0 $global-padding;
 	  font-size: 1.2rem;
 	  font-weight: 600;
 	}
 	   
 	.dpr_product-list-add-button {
-	  display:flex;
-	  justify-content:space-between;
-	  align-items:center;
-	  padding:$global-padding;
+	  @include breakpoint(large) {
+	  	display:flex;
+	  	justify-content:space-between;
+	  	align-items:center;
+	  }
+	  padding:0 $global-padding;
 	    select {
+	    	margin:0;
+	    	transition: all 0.25s ease-out;
 	    	$size:rem-calc(30px);
-	        padding: 0 10px;
+	        padding: 0 5px;
 	        height: $size;
 	        width:$size;
 	        font-size: .7rem;
+	            @include breakpoint(large) {
+	            	margin:0 0 $global-margin;
+	        			opacity:0;
+	            	transform: translatex(-130%);
+	            }
 	      }
 	  }
 	.dpr_product-list-add-button {
+				&::before {
+					transition: all 0.25s ease-out;
+				  content: 'Cant.';
+				  font-size: .8rem;
+				  font-weight: 100;
+				  @include breakpoint(large) {
+				  	transform: translatex(-130%);
+				  	opacity: 0;
+				  }
+				}
 	      .button_def.button_prod_add {
 	          display: inline-block;
 	          vertical-align: middle;
@@ -341,7 +401,7 @@ button.ui-dialog-titlebar-close {
 	          -webkit-appearance: none;
 	          border: 1px solid transparent;
 	          border-radius: 0.1875rem;
-	          transition: background-color 0.25s ease-out, color 0.25s ease-out;
+	          transition: all 0.25s ease-out;
 	          font-size: 0.9rem;
 	          font-weight: 700;
 	          line-height: 1;
@@ -349,16 +409,23 @@ button.ui-dialog-titlebar-close {
 	          cursor: pointer;
 	          background-color: $alert-color;
 	          color: $white;
+	          @include breakpoint(large) {
+	      			opacity:0;
+	          	transform: translatex(130%);
+	          }
 	          &:hover{
 	            background:scale-color($alert-color, $lightness: -14%);
 	          }
 	    }
 	  }
 	  .prod_compare {
-	    display: flex;
-	    justify-content: space-around;
-	    align-items: center;
-	    padding:0 0 1rem;
+	    padding:0 0 $global-padding;
+	    font-size: .8rem;
+	    text-align:center;
+	    color:$dark-gray;
+	    @include breakpoint(large) {
+	    	padding: 0 $global-padding*2 $global-padding/2 $global-padding*2;
+	    }
 	    input {
 	            margin: 0;
 	          }
