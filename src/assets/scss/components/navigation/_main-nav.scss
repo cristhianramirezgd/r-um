@@ -5,3 +5,77 @@ $app-dashboard-top-nav-height: rem-calc(55);
   width: 100%;
   flex: 0 0 $app-dashboard-top-nav-height;
 }
+//header
+.topbarslide{
+	.slick-track {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.header-um{
+	background-color: $white;
+}
+// megamenu main navigation total code
+#left_grupos_slide1 {
+  background: $white;
+  z-index: 9;
+  width: 100%;
+  @include breakpoint(large) {
+  	width: 80vw;
+  	max-width: $global-width - $global-margin;
+  	box-shadow: 0px 1px 3px rgba($black,.2);
+  }
+  ul {
+    list-style: none;
+  }
+  &>ul {
+    margin: 0;
+    position: relative;
+    &>li {
+		 @include breakpoint(large) {
+		 	display: flex;
+		 }
+		  &>ul {
+		    display: none;
+		    margin: 0;
+		    position: absolute;
+		    background: white;
+		    @include breakpoint(large) {
+					max-width: $global-width - (rem-calc(121px));
+					margin-left: rem-calc(121px);
+		    }
+		  }
+		  &:first-child{
+		  	>ul{
+		  		@include breakpoint(large) {
+					display:flex;
+					}
+		  	}
+		  }
+		}
+  }
+}
+.scroll-navigation{
+	border-bottom:5px solid $warning-color;
+}
+.fixed-top-nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background: rgba($white,.9);
+	box-shadow: 0px 1px 3px rgba($black,.2);
+	.logo-um{
+		@include breakpoint (large) {
+			display: flex;
+		}
+		img{
+			transition:all 90ms ease-in-out;
+			@include breakpoint(large) {
+				max-width: 100px;
+			}
+		}
+	}	
+}
