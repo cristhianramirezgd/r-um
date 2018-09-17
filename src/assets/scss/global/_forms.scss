@@ -36,11 +36,14 @@
 	font-size: .8rem;
 }
 .um-car-icon {
-  position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: .2rem 0;
+  	padding: $button-padding;
+  @include breakpoint (large) {
+  	  position: relative;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		padding: .2rem 0;
+  }
 }
 // card item
 #div_contenido_cart {
