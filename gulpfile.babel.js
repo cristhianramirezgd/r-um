@@ -12,6 +12,7 @@ import fs            from 'fs';
 import webpackStream from 'webpack-stream';
 import webpack2      from 'webpack';
 import named         from 'vinyl-named';
+const zip = require('gulp-zip');
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -94,7 +95,12 @@ function sass() {
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
+function zip_code() {
+    return gulp.src('src/assets/scss/app.scss')
+      .pipe(zip('um.zip'))
+      .pipe(gulp.dest(PATHS.dist + '/assets/css/zip'))
 
+}
 let webpackConfig = {
   module: {
     rules: [
@@ -153,6 +159,7 @@ function watch() {
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
+  gulp.watch(PATHS.dist + '/assets/css/*.css').on('all', zip_code);
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
