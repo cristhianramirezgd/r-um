@@ -119,6 +119,10 @@ $app-dashboard-top-nav-height: rem-calc(55);
 	         a{
 	         	color:$dark-gray;
 	         	font-weight: 700;
+	         	&:hover{
+	         		color:scale-color($dark-gray, $lightness: -14%);
+	         		text-decoration: underline;
+	         	}
 	         }
 	     }
 	 }
