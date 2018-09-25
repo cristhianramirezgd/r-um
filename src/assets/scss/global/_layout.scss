@@ -9,21 +9,40 @@
   padding: 0 $global-padding $global-padding;
 }
 #tpl_sort_by {
+  position:relative;
   @include breakpoint(large) {
+    select{
   	width: 40%;
+    }
+  }
+  &:hover{
+    select{
+      @include breakpoint(large) {
+        display:block;
+      }
+    }
   }
   span{
     background:$medium-gray;
-    padding:$global-padding;
+    padding:$global-padding/2 $global-padding;
     vertical-align:middle;
     border-radius:3px;
     font-weight:600;
     color:$white;
-    select{
-      margin-top:$global-margin;
-      width:auto;
+    width: 100%;
+    display: block;
     }
-  }
+    select{
+      width: 100%;
+      @include breakpoint(large) {
+        width:auto;
+        position: absolute;
+        top: 100%;
+        z-index: 9;
+        right: 0;
+        display:none;
+      }
+    }
 }
 // component autocomplete search
 ul#ui-id-1 {
