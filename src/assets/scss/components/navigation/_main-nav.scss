@@ -153,3 +153,16 @@ $app-dashboard-top-nav-height: rem-calc(55);
 		}
 	}
 }
+// breadcrumb
+.breadcrumbs-um{
+	font-size: .8rem;
+	 a {
+	    color: $dark-gray;
+	    font-size: .8rem;
+	    font-weight: 700;
+	    &:hover{
+	    	color:$warning-color;
+	    }
+
+	}
+}
