@@ -320,6 +320,7 @@ button.ui-dialog-titlebar-close {
 	    	box-shadow: 1px 1px 10px rgba($dark-gray,.2);
 	    	z-index:1;
 	    	transform: translateY(-2px);
+	    	.dpr_listname .button_def,
 	    	.button_def.button_prod_add,
 	    	.dpr_product-list-add-button select,
 	    	.dpr_product-list-add-button::before {
@@ -426,7 +427,7 @@ button.ui-dialog-titlebar-close {
 				  	opacity: 0;
 				  }
 				}
-	      .button_def.button_prod_add {
+	      .button_def.button_prod_add,.dpr_listname .button_def {
 	          display: inline-block;
 	          vertical-align: middle;
 	          margin: 0 0 $global-margin 0;
