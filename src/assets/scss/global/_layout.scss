@@ -44,6 +44,12 @@
       }
     }
 }
+.navigation-category-um{
+    padding:$global-padding 0;
+  @include breakpoint(large) {
+    padding:$global-padding*2 0;
+  }
+}
 // component autocomplete search
 ul#ui-id-1 {
   overflow-y: scroll;
