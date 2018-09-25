@@ -96,7 +96,7 @@ function sass() {
     .pipe(browser.reload({ stream: true }));
 }
 function zip_code() {
-    return gulp.src('src/assets/scss/app.scss')
+    return gulp.src(PATHS.dist + '/assets/css/app.css')
       .pipe(zip('um.zip'))
       .pipe(gulp.dest(PATHS.dist + '/assets/css/zip'))
 
