@@ -32,18 +32,25 @@
 }
 // #cartinfo_qty {}
 #cartinfo_value {
-  margin: 0 $global-margin/2;
-	font-size: .8rem;
+	margin: 0 $global-margin/2;
+	font-size: .7rem;
 }
 .um-car-icon {
-  	padding: $button-padding;
   @include breakpoint (medium) {
   	  position: relative;
   		display: flex;
   		align-items: center;
   		justify-content: center;
-  		padding: .2rem 0;
   }
+}
+.cart-icon {
+    font-size: 1.3rem;
+    padding-top: 1px;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    i{
+    	font-size: 1rem;
+    }
 }
 // card item
 #div_contenido_cart {
