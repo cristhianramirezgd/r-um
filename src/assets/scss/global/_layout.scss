@@ -46,9 +46,6 @@
 }
 .navigation-category-um{
     padding:$global-padding 0;
-  @include breakpoint(medium) {
-    padding:$global-padding*2 0;
-  }
 }
 // component autocomplete search
 ul#ui-id-1 {
@@ -125,11 +122,26 @@ li.ui-menu-item{
 }
 .title-product-um{
 	@include text-capital($global-margin 0);
-	padding: 0 $global-padding;
-	border-left: rem-calc(3px) solid $alert-color;
-	 }
-#product_gallery {
+  border-left: rem-calc(3px) solid $alert-color;
+  padding:$global-padding;
+    @include breakpoint(medium) {
+	   padding: 0 $global-padding;
+    }
+  }
+#product_gallery,
+.galery-product-um {
   position: relative;
+  float: none;
+}
+#product_availability .in_stock {
+    top: calc(100% - 2rem);
+    right: 0;
+}
+.wrapper-ribbon-big {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .ribbon-big {
 	position: absolute;
@@ -139,4 +151,82 @@ li.ui-menu-item{
 	font-weight: bold;
 	z-index: 1;
 	right: 0;
+}
+#product_review_score {
+    display: flex;
+    align-items: center;
+    color:$dark-gray;
+    font-size:.8rem;
+    justify-content: space-around;
+    padding:0 $global-padding;
+    max-width:rem-calc(500px);
+    border-top:1px solid $light-gray;
+    border-bottom:1px solid $light-gray;
+     a{
+        color:$dark-gray;
+    }
+}
+.etalage_small_thumbs> ul>li>img{
+  $size:rem-calc(42px);
+    max-width: $size;
+    max-height: $size;
+    @include breakpoint(medium) {
+      max-width: $size+(rem-calc(8px));
+      max-height: $size+(rem-calc(8px));
+    }
+}
+// Zoom
+ul#etalage {
+    width: 100%!important;
+    height: auto!important;
+    float: none!important;
+}
+li.etalage_thumb.etalage_thumb_active {
+    width: 100%;
+    height: auto!important;
+    position: relative;
+}
+li.etalage_zoom_area {
+    left: 100%!important;
+    top: -20%;
+}
+#etalage .etalage_thumb_image {
+  width: 100%!important;
+  height: auto!important;
+}
+li.etalage_small_thumbs {
+  width: 100%!important;
+}
+li.etalage_icon {
+  position: absolute;
+  top: 0!important;
+  left: 0!important;
+  padding: $global-padding*.8!important;
+  background-position: center center!important;
+  border: rem-calc(4px) solid $alert-color!important;
+  border-radius: 0px 100% 100% 100%!important;
+}
+#product_pricing {
+    font-weight:900;
+    font-size:0;
+    color:$dark-gray;
+    padding-top: $global-padding;
+    .suggested_price{
+     font-size:1rem;
+     width:100%;
+     text-decoration:line-through;
+     display:block;
+    }
+    #product_price{
+     font-size:1.8rem;
+     width:100%;
+     display:block;
+    }
+}
+div#product_variants> select {
+    max-width: initial;
+    width: auto;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
 }
