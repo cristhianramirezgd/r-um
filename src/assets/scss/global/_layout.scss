@@ -10,14 +10,14 @@
 }
 #tpl_sort_by {
   position:relative;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     select{
   	width: 40%;
     }
   }
   &:hover{
     select{
-      @include breakpoint(large) {
+      @include breakpoint(medium) {
         display:block;
       }
     }
@@ -34,7 +34,7 @@
     }
     select{
       width: 100%;
-      @include breakpoint(large) {
+      @include breakpoint(medium) {
         width:auto;
         position: absolute;
         top: 100%;
@@ -46,7 +46,7 @@
 }
 .navigation-category-um{
     padding:$global-padding 0;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     padding:$global-padding*2 0;
   }
 }
@@ -55,7 +55,7 @@ ul#ui-id-1 {
   overflow-y: scroll;
   max-height: 60vh;
   padding: 0 $global-padding/2;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
   	max-height: 50vh;
   	padding: 0 $global-padding*2;
   }
@@ -76,7 +76,7 @@ li.ui-menu-item{
 	padding: rem-calc(2px) 0;
 	transition:all 120ms ease-in;
 	background: $white;
-	@include breakpoint(large) {
+	@include breakpoint(medium) {
 		&:hover,&:focus {
 		  transform:scale(1.1);
 		  border-radius: $global-padding*2;
@@ -113,7 +113,7 @@ li.ui-menu-item{
 // producto
 @mixin text-capital($margin){
 		text-transform: lowercase;
-		@include breakpoint(large) {
+		@include breakpoint(medium) {
 			margin:$margin;
 			}
 	  	&::first-letter{

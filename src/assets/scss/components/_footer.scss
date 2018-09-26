@@ -8,7 +8,7 @@ footer{
 	}
 	&>div{
 		padding:$global-padding/2;
-		@include breakpoint(large ) {	
+		@include breakpoint(medium) {	
 		padding:$global-padding 0;
 		}
 	}

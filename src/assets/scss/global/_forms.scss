@@ -37,7 +37,7 @@
 }
 .um-car-icon {
   	padding: $button-padding;
-  @include breakpoint (large) {
+  @include breakpoint (medium) {
   	  position: relative;
   		display: flex;
   		align-items: center;
@@ -158,7 +158,7 @@
 				  justify-content: space-around;
 				  align-items: center;
 				  padding: 0 $global-padding;
-				  @include breakpoint(large) {
+				  @include breakpoint(medium) {
 				  	padding: 0 $global-padding*6;
 				  }
 				 }
@@ -200,7 +200,7 @@
 		  label{
   		  text-align: right;
   		  line-height: 1;
-  		  color: #ff5722;
+  		  color: $alert-color;
   		  margin-bottom:-($global-margin);
   		}
   		p{

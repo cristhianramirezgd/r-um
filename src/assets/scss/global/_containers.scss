@@ -22,7 +22,7 @@ a.listname {
   	max-width: 50%;
   	width: 50%;
   }
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
   	max-width: 25%;
   	width: 25%;
   }
@@ -128,7 +128,7 @@ a.listname {
 		justify-content:space-around;
 		position:relative;
 		grid-template-columns:1fr 1fr;
-		@include breakpoint(large) {
+		@include breakpoint(medium) {
 		  grid-template-columns:1fr 1fr 1fr;
 		}
 		.dpr_container{
@@ -151,7 +151,7 @@ a.listname {
 				  font-size:.8rem; 
 				}
 				.dpr_imagen_thumb{
-						@include breakpoint(large) {
+						@include breakpoint(medium) {
 							position: absolute;
 						}
 					  top: 0;
@@ -178,7 +178,7 @@ a.listname {
 				.dpr_listprice,
 				.dpr_prod_quick_view,
 				.dpr_product-name {
-					@include breakpoint(large) {
+					@include breakpoint(medium) {
 						transition: all 150ms ease-in-out;
 						opacity: 1;
 						transform: translateY(0);
@@ -186,14 +186,14 @@ a.listname {
 				}
 			  img{
 			  	opacity: .2;
-			  	@include breakpoint(large) {
+			  	@include breakpoint(medium) {
 			  		filter: blur(4px);
 			  	}
 			  }
 			}
 			.prod_compare {
 				font-size: .8rem;
-				@include breakpoint(large) {
+				@include breakpoint(medium) {
 			  	display: none;
 				}
 			}
@@ -262,7 +262,7 @@ a.listname {
 	  font-size: .9rem;
 	  color: black;
 	  font-weight: 700;
-	  @include breakpoint(large) {
+	  @include breakpoint(medium) {
 	  	opacity: 0;
 	  	transform: translateY(100px);
 	  }
@@ -302,7 +302,7 @@ button.ui-dialog-titlebar-close {
 	  background-color: $white;
 	  float:left;
 	  width: 50%;
-	  @include breakpoint(large) {
+	  @include breakpoint(medium) {
 	  	max-width: 25%;
 	  }
 	   a{
@@ -316,7 +316,7 @@ button.ui-dialog-titlebar-close {
 	    .dpr_product-name{
 	    	color:$warning-color;
 	    }
-	    @include breakpoint(large) {
+	    @include breakpoint(medium) {
 	    	box-shadow: 1px 1px 10px rgba($dark-gray,.2);
 	    	z-index:1;
 	    	transform: translateY(-2px);
@@ -353,7 +353,7 @@ button.ui-dialog-titlebar-close {
 	  padding:0 $global-padding;
 	  border-left: 3px solid $alert-color;
 	  height: 41px;
-	  @include breakpoint(large) {
+	  @include breakpoint(medium) {
 	  	height: 49px;
 	  }
 	  overflow: hidden;
@@ -362,7 +362,7 @@ button.ui-dialog-titlebar-close {
 	  	&::first-letter{
 	  		text-transform: capitalize;
 	  	}
-	  @include breakpoint(large) {
+	  @include breakpoint(medium) {
 	  	font-size: rem-calc(14px)
 	  }
 	}
@@ -395,7 +395,7 @@ button.ui-dialog-titlebar-close {
 	}
 	   
 	.dpr_product-list-add-button {
-	  @include breakpoint(large) {
+	  @include breakpoint(medium) {
 	  	display:flex;
 	  	justify-content:space-between;
 	  	align-items:center;
@@ -409,7 +409,7 @@ button.ui-dialog-titlebar-close {
 	        height: $size;
 	        width:$size;
 	        font-size: .7rem;
-	            @include breakpoint(large) {
+	            @include breakpoint(medium) {
 	            	margin:0 0 $global-margin;
 	        			opacity:0;
 	            	transform: translatex(-130%);
@@ -422,7 +422,7 @@ button.ui-dialog-titlebar-close {
 				  content: 'Cant.';
 				  font-size: .8rem;
 				  font-weight: 100;
-				  @include breakpoint(large) {
+				  @include breakpoint(medium) {
 				  	transform: translatex(-130%);
 				  	opacity: 0;
 				  }
@@ -444,7 +444,7 @@ button.ui-dialog-titlebar-close {
 	          cursor: pointer;
 	          background-color: $alert-color;
 	          color: $white;
-	          @include breakpoint(large) {
+	          @include breakpoint(medium) {
 	      			opacity:0;
 	          	transform: translatex(130%);
 	          }
@@ -458,7 +458,7 @@ button.ui-dialog-titlebar-close {
 	    font-size: .8rem;
 	    text-align:center;
 	    color:$dark-gray;
-	    @include breakpoint(large) {
+	    @include breakpoint(medium) {
 	    	padding: 0 $global-padding*2 $global-padding/2 $global-padding*2;
 	    }
 	    input {
@@ -481,7 +481,7 @@ button.ui-dialog-titlebar-close {
 div#quick_view_text {
   display: grid;
 	grid-template-columns: 1fr;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
 		grid-template-columns: 2fr 1fr;
   }
   grid-gap: 1rem;

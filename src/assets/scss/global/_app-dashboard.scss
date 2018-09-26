@@ -136,7 +136,7 @@ $app-dashboard-sidebar-width: $off-canvas-width;
     @include shrunk-sidebar()
   }
 }
-@include breakpoint(large) {
+@include breakpoint(medium) {
   .app-dashboard.shrink-large {
     @include shrunk-sidebar()
   }

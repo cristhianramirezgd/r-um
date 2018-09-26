@@ -21,7 +21,7 @@ $app-dashboard-top-nav-height: rem-calc(55);
   background: $white;
   z-index: 9;
   width: 100%;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
   	width: 80vw;
   	max-width: $global-width - $global-margin;
   	box-shadow: 0px 1px 3px rgba($black,.2);
@@ -33,22 +33,22 @@ $app-dashboard-top-nav-height: rem-calc(55);
     margin: 0;
     position: relative;
     &>li {
-		 @include breakpoint(large) {
+		 @include breakpoint(medium) {
 		 	display: flex;
 		 }
 		  &>ul {
 		    display: none;
 		    margin: 0;
 		    position: absolute;
-		    background: white;
-		    @include breakpoint(large) {
+		    background: $white;
+		    @include breakpoint(medium) {
 					max-width: $global-width - (rem-calc(121px));
 					margin-left: rem-calc(121px);
 		    }
 		  }
 		  &:first-child{
 		  	>ul{
-		  		@include breakpoint(large) {
+		  		@include breakpoint(medium) {
 					display:flex;
 					}
 		  	}
@@ -68,12 +68,12 @@ $app-dashboard-top-nav-height: rem-calc(55);
 	background: rgba($white,.9);
 	box-shadow: 0px 1px 3px rgba($black,.2);
 	.logo-um{
-		@include breakpoint (large) {
+		@include breakpoint (medium) {
 			display: flex;
 		}
 		img{
 			transition:all 90ms ease-in-out;
-			@include breakpoint(large) {
+			@include breakpoint(medium) {
 				max-width: 100px;
 			}
 		}
@@ -129,7 +129,7 @@ $app-dashboard-top-nav-height: rem-calc(55);
 	}
 	&.last-nav-pages{
 			padding: $global-padding $global-padding;
-		@include breakpoint(large) {
+		@include breakpoint(medium) {
 			padding: $global-padding*2 0;
 		}
 		.page_nav_grid{
