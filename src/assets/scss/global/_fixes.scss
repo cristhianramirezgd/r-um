@@ -3,6 +3,9 @@ body{
 }
 .logo-um{
 	padding: $global-padding;
+  img {
+      max-width: rem-calc(140px);
+  }
 }
 .navigation-um{
 	>div{
@@ -61,4 +64,10 @@ table.container_table tbody {
 }
 .container_div {
     width: 100%;
+}
+.specs_title_select {
+    display: none;
+}
+#product_variants  br{
+    display: none;
 }
