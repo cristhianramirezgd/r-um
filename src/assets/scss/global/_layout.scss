@@ -211,6 +211,7 @@ li.etalage_icon {
     font-size:0;
     color:$dark-gray;
     padding-top: $global-padding;
+    padding-left: $global-padding;
     .suggested_price{
      font-size:1rem;
      width:100%;
@@ -223,10 +224,52 @@ li.etalage_icon {
      display:block;
     }
 }
-div#product_variants> select {
+#product_variants> select {
     max-width: initial;
     width: auto;
     border-radius: 0;
     border-left: 0;
     border-right: 0;
+}
+.button_prod_add.button_add_long {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem 0;
+    font-family: inherit;
+    padding: 0.85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0.1875rem;
+    transition: all 0.25s ease-out;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color:$alert-color;
+    color: $white;
+    &:hover{
+      background: scale-color($alert-color, $lightness: -15%);
+    }
+}
+.select_variant {
+    display: none;
+}
+
+#product_variants {
+    display: flex;
+    align-items: center;
+    padding: $global-padding;
+    &>select{
+      margin:0;
+    }
+}
+
+#info_product{
+  a{
+    color:$warning-color;
+  }
+  &::after {
+    content: 'del producto con este peso';
+  }
 }
