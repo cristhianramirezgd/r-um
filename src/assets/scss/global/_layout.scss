@@ -110,3 +110,33 @@ li.ui-menu-item{
 		}
  }
 }
+// producto
+@mixin text-capital($margin){
+		text-transform: lowercase;
+		@include breakpoint(large) {
+			margin:$margin;
+			}
+	  	&::first-letter{
+	  		text-transform: uppercase;
+	  	}
+}
+.brd_prd_name{
+@include text-capital(0);
+}
+.title-product-um{
+	@include text-capital($global-margin 0);
+	padding: 0 $global-padding;
+	border-left: rem-calc(3px) solid $alert-color;
+	 }
+#product_gallery {
+  position: relative;
+}
+.ribbon-big {
+	position: absolute;
+	background: $alert-color;
+	padding: rem-calc(4px);
+	color: $white;
+	font-weight: bold;
+	z-index: 1;
+	right: 0;
+}
