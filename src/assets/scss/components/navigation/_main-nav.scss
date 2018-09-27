@@ -12,7 +12,9 @@ $app-dashboard-top-nav-height: rem-calc(55);
 		align-items: center;
 	}
 }
-
+.sub-top-bar a {
+    font-size: .85rem;
+}
 .header-um{
 	background-color: $white;
 }
@@ -71,7 +73,7 @@ $app-dashboard-top-nav-height: rem-calc(55);
   }
 }
 .scroll-navigation{
-	border-bottom:5px solid $warning-color;
+	border-bottom:rem-calc(3px) solid $warning-color;
 }
 .fixed-top-nav{
 	position: fixed;
@@ -185,5 +187,81 @@ $app-dashboard-top-nav-height: rem-calc(55);
 	 ul {
 	    list-style: none;
 	    margin:0;
+	}
+}
+// carrito de compras
+#canasta_compras {
+    position: relative;
+}
+.car-view-um {
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    right: 0;
+    background: $white;
+    box-shadow: 0px rem-calc(1px) rem-calc(3px) rgba($black,.2);
+    padding-bottom: $global-padding/2;
+	right: 0;
+	left: 0;
+	z-index: 999;
+   @include breakpoint(medium) {
+   	right: $global-margin;
+   	left:initial;
+   	width: 30vw;
+   	padding-bottom: 1rem;
+   	max-width: rem-calc(335px);
+   }
+
+	#cart_column_title {
+	    font-weight: 900;
+	    color: $alert-color;
+	    background: $white;
+	}
+
+	tr.cart_column_product_container {
+	    background: $white;
+	}
+
+	td.cart_column_prod_name a,
+	td.cart_column_prod_name {
+	    color: $dark-gray;
+	    font-size: .7rem;
+	    text-transform: lowercase;
+	    text-align: left;
+	}
+
+
+	.cart_column_products {
+		tr {
+			background: $white!important;
+		}
+	}
+
+	td.cart_column_prod_price {
+	    font-size: .7rem;
+	}
+
+	td.cart_column_image img {
+	    width: 50px;
+	}
+
+	td.cart_column_image {
+	    padding: 0;
+	}
+	td.cart_column_prod_name {
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    br {
+	    	    display: none;
+	    	}
+    	a:first-letter {
+    		    text-transform: uppercase!important;
+    		}
+	}
+	tr.cart_column_totals {
+	    color: $alert-color;
+	    font-size: .8rem;
+	    font-weight:600;
 	}
 }
