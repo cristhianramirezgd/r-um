@@ -45,7 +45,7 @@
     }
 }
 .navigation-category-um{
-    padding:$global-padding 0;
+    padding:$global-padding;
 }
 // component autocomplete search
 ul#ui-id-1 {
@@ -119,6 +119,7 @@ li.ui-menu-item{
 }
 .brd_prd_name{
 @include text-capital(0);
+font-weight: 900;
 }
 .title-product-um{
 	@include text-capital($global-margin 0);
