@@ -290,6 +290,31 @@ button.ui-dialog-titlebar-close {
     font-weight: 600;
   }
 }
+.dpr_out_of_stock {
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  margin: 0 0 $global-margin 0;
+  font-family: inherit;
+  padding: 0.85em $global-padding;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0.1875rem;
+  transition: all 0.25s ease-out;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: $dark-gray;
+  color: $white;
+  width: 100%;
+  z-index: 1;
+  border-radius:20px;
+  @include breakpoint(medium) {
+ 		transform:rotate(5deg)translate(0px,-1000px)scale(1);
+  }
+}
 
 // vitrina producto 2
 .group_shield{
@@ -304,6 +329,7 @@ button.ui-dialog-titlebar-close {
 	  width: 50%;
 	  @include breakpoint(medium) {
 	  	max-width: 25%;
+	  	max-height: rem-calc(450px);
 	  }
 	   a{
 	    color:black;
@@ -320,6 +346,10 @@ button.ui-dialog-titlebar-close {
 	    	box-shadow: 1px 1px 10px rgba($dark-gray,.2);
 	    	z-index:1;
 	    	transform: translateY(-2px);
+		    .dpr_out_of_stock {
+		      transition: all 480ms ease-in-out;
+		    	transform:rotate(5deg)translate(0px,-40px)scale(3);
+		    }
 	    	.dpr_listname .button_def,
 	    	.button_def.button_prod_add,
 	    	.dpr_product-list-add-button select,
@@ -340,6 +370,8 @@ button.ui-dialog-titlebar-close {
 	  img{
 	    margin:0 auto;
 	    display: block;
+	    min-height: 100%;
+	    min-width: 100%;
 
 	  }
 	}

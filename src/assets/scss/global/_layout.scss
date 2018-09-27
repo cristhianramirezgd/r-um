@@ -1,3 +1,10 @@
+//Banner Middle
+.banner-home-middle {
+  padding: $global-padding 0;
+}
+.buttons-middle-banner {
+  width: 100%;
+}
 // carousel brands
 .top-brand-title {
   padding: $global-padding;
@@ -135,9 +142,27 @@ font-weight: 900;
   float: none;
 }
 #product_availability .in_stock {
-    top: calc(100% - 2rem);
     right: 0;
+    font-size: 1rem;
 }
+#div_with_stock {
+  font-size: 0;
+}
+#product_availability {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  z-index: 1;
+}
+.out_of_stock {
+  background: #333;
+  color: white;
+  font-weight: 900;
+  padding: 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
 .wrapper-ribbon-big {
     position: absolute;
     top: 0;
