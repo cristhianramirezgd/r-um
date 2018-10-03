@@ -274,23 +274,40 @@ li.etalage_icon {
     cursor: pointer;
     background-color:$alert-color;
     color: $white;
+     max-width: 100%;
+    width: 100%;
+    @include breakpoint(medium) {
+      width:auto;
+    }
     &:hover{
       background: scale-color($alert-color, $lightness: -15%);
     }
 }
-.select_variant {
-    display: none;
+#prod_spec_input_hidden {
+   display: inline-block;
+   font-size: .85rem;
 }
-
 #product_variants {
-    display: flex;
-    align-items: center;
-    padding: $global-padding;
+    padding: 0 $global-padding;
     &>select{
       margin:0;
     }
 }
-
+#quantity_selects_div {
+    max-width: rem-calc(139px);
+}
+.select_variant,
+#product_add_cart {
+    padding: 0 $global-padding;
+}
+#product_add_cart{
+  .input-group.plus-minus-input{
+     max-width: rem-calc(139px);
+  }
+}
+.select_variant{
+  font-size:.85rem;
+}
 #info_product{
   a{
     color:$warning-color;
