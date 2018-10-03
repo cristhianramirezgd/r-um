@@ -316,3 +316,53 @@ li.etalage_icon {
     content: 'del producto con este peso';
   }
 }
+// checkout
+.main-account-um{
+  display: flex;  
+  flex-flow: row wrap;
+  font-size: .85rem;
+    .account-content-um{ flex: 2 0px; }
+    #myaccount_title{ order: 1; } 
+    #myaccount_registration{ order: 2; }
+    #myaccount_new{ order: 3; }
+   .wrapper-account-content-um {
+      justify-content: space-around;
+      background: $white;
+      @include breakpoint(medium) {
+        margin:$global-margin auto;
+      }
+    }
+    #myaccount_title {
+        width: 100%;
+        padding: $global-padding;
+    }
+    #myaccount_new_title,
+    #myaccount_registration_title{
+      h2{
+        font-size: 1rem;
+        color:$alert-color;
+      }
+    }
+    input {
+        margin: 0;
+    }
+    #clear {
+        display: none;
+    }
+    a {
+        color: $dark-gray;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    #updatecontactform input.button {
+        width: 100%;
+        font-weight: 900;
+        padding: 0.85em $global-padding;
+    }
+    form#loginform input[type*="submit"] {
+        width:100%;
+    }
+}
+
+

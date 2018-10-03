@@ -219,3 +219,49 @@
 			}
 		}
 }
+.button_def{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 $global-margin 0;
+	font-family: inherit;
+	padding: 0.85em $global-padding;
+	-webkit-appearance: none;
+	border: rem-calc(1px) solid transparent;
+	border-radius: $global-radius;
+	transition: background-color 0.25s ease-out, color 0.25s ease-out;
+	font-size: 0.9rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	cursor: pointer;
+	background-color: $alert-color;
+	color: $white;
+	&:hover{
+		background:scale-color($alert-color, $lightness: -14%);
+	}
+}
+#myaccount_registration_facebook_login{
+	a{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 0 $global-margin 0;
+		font-family: inherit;
+		padding: 0.85em $global-padding;
+		-webkit-appearance: none;
+		border: rem-calc(1px) solid transparent;
+		border-radius: $global-radius;
+		transition: background-color 0.25s ease-out, color 0.25s ease-out;
+		font-size: 0.9rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		cursor: pointer;
+		background-color: $primary-color;
+		color: $white;
+		width: 100%;
+		&:hover{
+			background:scale-color($primary-color, $lightness: -14%);
+			color:scale-color($white, $lightness: -14%);
+		}
+	}
+}

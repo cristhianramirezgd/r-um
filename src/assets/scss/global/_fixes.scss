@@ -58,7 +58,7 @@ table.product_list_table tr:last-child {
 }
 
 table.product_list_table td {
-  background: white;
+  background: $white;
 }
 table.container_table tbody {
   border: 0;
@@ -79,4 +79,7 @@ table.container_table tbody {
 // arreglo altura
 .dpr_listname {
     margin-bottom: 1px;
+}
+table tbody tr:nth-child(even){
+    background: $white;
 }
