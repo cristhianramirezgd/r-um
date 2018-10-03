@@ -323,25 +323,108 @@ li.etalage_icon {
   font-size: .85rem;
     .account-content-um{ flex: 2 0px; }
     #myaccount_title{ order: 1; } 
-    #myaccount_registration{ order: 2; }
-    #myaccount_new{ order: 3; }
+    #myaccount_registration,
+    #myaccount_addresses_address_book{ order: 2; }
+    #myaccount_new,
+    #myaccount_addresses_new_addresss{ order: 3; }
    .wrapper-account-content-um {
       justify-content: space-around;
       background: $white;
+      width: 100%;
       @include breakpoint(medium) {
         margin:$global-margin auto;
       }
     }
-    #myaccount_title {
+    #myaccount_title,
+    #myaccount_orders_title,
+    .myaccount_page_title{
         width: 100%;
         padding: $global-padding;
     }
     #myaccount_new_title,
-    #myaccount_registration_title{
+    #myaccount_registration_title,
+    #updatecontactform,
+    #new_address{
       h2{
         font-size: 1rem;
         color:$alert-color;
       }
+    }
+    // into account
+    #myaccount_orders_submenu,
+    .myaccount_submenu{
+        width: 100%;
+        display: flex;
+        td {
+                width: 100%;
+                text-align:center;
+                font-size: 0;
+                @include breakpoint(medium) {
+                  display: flex;
+                }
+                & a,
+                & b {
+                    font-size: .85rem;
+                }
+                & b{
+                  color:$alert-color;
+                      width: 100%;
+                }
+            }
+    }
+    #myaccount_box1 {
+        width: 100%;
+    }
+    #myaccount_orders_orders_placed {
+      & b{
+        color:$alert-color;
+      }
+      select {
+              width: auto;
+          }
+    }
+    // actualizar datos
+    #myaccount_profile_box1 {
+        width: 100%;
+        #updatecontactform {
+            @include breakpoint(medium) {
+              width: 50%;
+              margin: 0 auto;
+            }
+            br {
+                display: none;
+            }
+
+        }
+    }
+    // actualizar direcciones
+    #myaccount_addresses_address_book{
+    #address_book{
+        font-size: 1rem;
+        color:$alert-color;
+        font-weight: 600;
+      }
+    }
+    #new_address {
+      br {
+              display: none;
+          }
+    }
+    #updateshipform{
+      br {
+             display: none;
+         }
+      center{
+        a{
+          width: 100%;
+          font-weight: 900;
+          padding: 0.85em $global-padding;
+          color:$white;
+        }
+      }
+    }
+    #address_selection .formtable td {
+        background: #f3f4f6;
     }
     input {
         margin: 0;
@@ -355,10 +438,12 @@ li.etalage_icon {
         display: block;
         text-align: center;
     }
-    #updatecontactform input.button {
+    #updatecontactform input.button,
+    #update-contact {
         width: 100%;
         font-weight: 900;
         padding: 0.85em $global-padding;
+        color:$white;
     }
     form#loginform input[type*="submit"] {
         width:100%;
