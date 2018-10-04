@@ -482,4 +482,70 @@ li.etalage_icon {
     }
 }
 
-
+// Carrito de compras
+.list-item-checkout-um{
+	#cart_container{
+		@include breakpoint(medium) {
+			padding:$global-padding;
+		}
+		h2{
+			font-size: 1rem;
+			color:$alert-color;
+		}
+		&>br{
+			display:none;
+		}
+			#recalculateform{
+				img{
+					max-width: 100px;
+				}
+				td {
+				  padding: 0 $global-padding;
+				  vertical-align: middle;
+				  &>a{
+				  	color:$dark-gray;
+				  	text-transform: lowercase;
+				  	font-weight: 900;
+				  	&:first-letter{
+				  		text-transform: uppercase;
+				  	}
+				  	&:hover{
+				  		color:$warning-color;
+				  	}
+				  }
+				  .fa{
+				  	color:$alert-color;
+				  }
+				  .small.prd_qty_vc.im-enteros{
+				  	margin:0;
+				  	text-align: center;
+				  }
+				  .js_remove {
+				  	a {
+					    color: red;
+					    font-size: .85rem;
+					  }
+				  }
+				}
+				tr {
+				  border-bottom: 1px solid $light-gray;
+				  &:last-child{
+				  	a{
+				  		font-weight: 900;
+				  		padding: 0.85em $global-padding;
+				  		color:$white;
+				  	}
+				  }
+				}
+				tr.cart_head,
+				tr.cart_total {
+					background: $alert-color;
+					color: $white;				
+				  b{
+				  	padding: 1rem 0;
+				  	display: block;
+				  }
+				}	
+			}
+	}
+}
