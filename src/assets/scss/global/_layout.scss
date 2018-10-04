@@ -549,3 +549,72 @@ li.etalage_icon {
 			}
 	}
 }
+// imputchip customer
+.inputship-um{
+	.steps-pay-um {
+	  position: relative;
+	}
+	.steps-pay-um::after {
+	  content: '';
+	  border-bottom: rem-calc(4px) solid $warning-color;
+	  display: block;
+	  position: absolute;
+	  top: 50%;
+	  left: 0;
+	  right: 0;
+	  z-index: -1;
+	}
+	#tpl_steps {
+		#steps_checkout_info {
+			  display: flex;
+			  justify-content: space-around;
+			  align-items: center;
+			  text-align: center;
+			}
+	}
+	#tpl_logout {
+			  text-align: right;
+		a {
+			  padding: 1rem;
+			  color: $warning-color;
+			}
+	}
+	form#updatecontactform {
+	  font-size: .85rem;
+	  input {
+	  	  margin: 0;
+	  	}
+	}
+	#billing_main_table {
+		td {
+			b {
+			  color: $warning-color;
+			}
+		}
+	}
+	#billing_main_table td {
+	  padding: $global-padding/2;
+	}
+
+	#opciones_estados,
+	#div_city{
+		 select {
+			  margin: 0;
+			}
+	}
+	#country{
+		margin: 0;
+	}
+	.general_title,
+	#cart_column_title{
+		font-size: 1rem;
+		color:$alert-color;
+		font-weight: 600;
+	}
+	.wrapper-main-inputship {
+		margin-bottom:$global-margin;
+		& > div {
+			  padding: $global-padding;
+			}
+	}
+}
