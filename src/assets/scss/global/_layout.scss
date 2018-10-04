@@ -344,7 +344,8 @@ li.etalage_icon {
     #myaccount_new_title,
     #myaccount_registration_title,
     #updatecontactform,
-    #new_address{
+    #new_address,
+    #myaccount_wishlist{
       h2{
         font-size: 1rem;
         color:$alert-color;
@@ -426,6 +427,37 @@ li.etalage_icon {
     #address_selection .formtable td {
         background: #f3f4f6;
     }
+    // Whislist
+    .wishlist-title{
+			font-size: 1rem;
+			color:$alert-color;
+    }
+		#wishlists_create input[type*="submit"]{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 0 1rem 0;
+			font-family: inherit;
+			padding: 0.85em 1em;
+			-webkit-appearance: none;
+			border: 1px solid transparent;
+			border-radius: 0.1875rem;
+			transition: all 0.25s ease-out;
+			font-size: 0.9rem;
+			font-weight: 700;
+			line-height: 1;
+			text-align: center;
+			cursor: pointer;
+			background-color:$alert-color;
+			color: $white;
+			 max-width: 100%;
+			width: 100%;
+			@include breakpoint(medium) {
+			  width:auto;
+			}
+			&:hover{
+			  background: scale-color($alert-color, $lightness: -15%);
+			}
+		}
     input {
         margin: 0;
     }
