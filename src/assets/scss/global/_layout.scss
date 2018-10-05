@@ -640,3 +640,38 @@ li.etalage_icon {
 			}
 	}
 }
+// confirm order
+.order-confirm-um{
+  #confirm_buttons{
+    &>a{
+      &:last-child {
+          font-weight: 900;
+          padding: 0.85em $global-padding;
+          color:$white;
+      }
+    }
+  }
+ #confirm_order_num,
+ #confirm_order_date{
+   font-size:.85rem;
+   color:$warning-color; 
+   font-weight:900;
+   padding:0 $global-padding;
+  }
+  table#confirm_cart_table {
+      font-size: .85rem;
+      text-transform: lowercase;
+      tr {
+        td{
+          &:first-letter {
+              text-transform: uppercase;
+          }
+        }
+      }
+      #confirm_cart_head,
+      .confirm_cart_total {
+          background: $alert-color;
+          color: $white;
+      }
+  }
+}
