@@ -435,11 +435,11 @@ li.etalage_icon {
       	color:$warning-color;
       }
     }
-    div#address_selection>table {
+    #address_selection>table {
       width: auto!important;
     }
 
-    div#address_selection>table tr td {
+    #address_selection>table tr td {
       width: 100%;
       display: block;
     }
@@ -594,13 +594,102 @@ li.etalage_icon {
 }
 // imputchip customer
 .inputship-um{
+  .cart-resume-um {
+      font-size: .85rem;
+      b {
+            color: $alert-color;
+        }
+  }
+  #returning_customers_title {
+      display: none;
+  }
 	#tpl_logout {
 			  text-align: right;
 		a {
 			  padding: 1rem;
-			  color: $warning-color;
+			  color: $alert-color;
+        font-weight: 900;
 			}
 	}
+  .table_address_selection {
+    td {
+          font-size: .85rem;
+          text-transform: lowercase;
+          &:first-letter {
+                text-transform: uppercase;
+            }
+          &:last-child{
+            a {
+                   display: inline-block;
+                   vertical-align: middle;
+                   margin: 0 0 1rem 0;
+                   font-family: inherit;
+                   padding: 0.85em 1em;
+                   -webkit-appearance: none;
+                   border: 1px solid transparent;
+                   border-radius: 0.1875rem;
+                   transition: all 0.25s ease-out;
+                   font-size: 0.9rem;
+                   font-weight: 700;
+                   line-height: 1;
+                   text-align: center;
+                   cursor: pointer;
+                   background-color:$alert-color;
+                   color: $white;
+                   &:hover{
+                     background: scale-color($alert-color, $lightness: -15%);
+                   }
+                   &:first-letter {
+                       text-transform: uppercase;
+                   }
+               }
+          }
+      }
+      tr {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+      }
+  }
+  #tpl_address_selection{
+    &>b {
+          color: $alert-color;
+          font-weight: 900;
+      }
+  }
+  #new_customer_form{
+    tr:first-child {
+        color: $alert-color;
+        font-size: 1rem;
+        font-weight: 900;
+        td:last-child{
+          &:before {
+            content: '←';
+            margin-right: .5rem;
+        }
+        }
+    }
+  }
+  #returning_customer_intro {
+      margin-bottom: 1rem;
+  }
+  #returning_customer_email label,
+  #returning_customer_password select {
+      font-size: .8rem;
+  }
+  #returning_customer_password{
+    &>a {
+          color: $alert-color;
+          text-align: center;
+          display:block;
+      }
+  }
+  #returning_customer_button {
+    input {
+          width: 100%;
+      }
+  }
 	form#updatecontactform {
 	  font-size: .85rem;
 	  input {
@@ -639,6 +728,98 @@ li.etalage_icon {
 			  padding: $global-padding;
 			}
 	}
+  // cart     
+  #cart_column_title {
+      font-weight: 900;
+      color: $alert-color;
+      background: $white;
+  }
+
+  tr.cart_column_product_container {
+      background: $white;
+  }
+
+  td.cart_column_prod_name a,
+  td.cart_column_prod_name {
+      color: $dark-gray;
+      font-size: .7rem;
+      text-transform: lowercase;
+      text-align: left;
+  }
+
+
+  .cart_column_products {
+    tr {
+      background: $white!important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: $global-margin;
+    }
+  }
+
+  td.cart_column_prod_price {
+      font-size: .7rem;
+  }
+
+  td.cart_column_image img {
+      width: 50px;
+  }
+
+  td.cart_column_image {
+      padding: 0;
+  }
+  td.cart_column_prod_name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      br {
+            display: none;
+        }
+      a:first-letter {
+            text-transform: uppercase!important;
+        }
+  }
+  tr.cart_column_totals {
+      color: $alert-color;
+      font-size: .8rem;
+      font-weight:600;
+  }
+  .address-destiny-um {
+      font-size: .85rem;
+    #new_customer_title{
+      color:$alert-color;
+      font-weight: 900;
+    }
+    #new_customer_form_intro {
+      b {
+        color:$alert-color;
+        font-weight: 900;
+      }
+    }
+    #new_customer_form{
+      td{
+        input{
+          margin:0;
+        }
+        b{
+          color:$alert-color;
+          font-weight: 900;
+          font-size: .8rem;
+        }
+        br{
+          display:none;
+        }
+      }
+      center{
+        input{
+          width:100%;
+          display: block;
+        }
+      }
+    }
+  }
+
 }
 // confirm order
 .order-confirm-um{
