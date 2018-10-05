@@ -856,3 +856,160 @@ li.etalage_icon {
       }
   }
 }
+// Input pay cjheckout
+.input-pay-um{
+ #order_details {
+  table{
+    margin:0;
+    a {
+        color: $alert-color;
+        font-weight: 900;
+        transition: all 0.25s ease-out;
+        &:hover{
+          color: scale-color($alert-color, $lightness: -15%);
+        }
+    }
+  }
+  .cart_table{
+    background:$white;
+        tr {
+            font-size: .7rem;
+            text-transform:lowercase;
+            &.cart_head {
+            color:$alert-color;
+            font-size: .85rem!important;
+          }
+          td{
+            hr {
+                display: none;
+            }
+            &:first-letter{
+                  text-transform:uppercase;
+              }
+          }
+          img{
+                  min-width:40px;
+              }
+        }
+        #payment_discounts {
+          padding: $global-padding/2;
+          background: #f3f4f6;
+          b {
+                color: $alert-color;
+                display: inline-block;
+            }
+           a {
+              display: inline-block;
+              vertical-align: middle;
+              margin: 0;
+              font-family: inherit;
+              padding: 0.85em $global-margin;
+              -webkit-appearance: none;
+              border: 1px solid transparent;
+              border-radius: 0.1875rem;
+              transition: all 0.25s ease-out;
+              font-size: 0.9rem;
+              font-weight: 700;
+              line-height: 1;
+              text-align: center;
+              cursor: pointer;
+              background-color:$alert-color;
+              color: $white;
+              &:hover{
+                background: scale-color($alert-color, $lightness: -15%);
+              }
+          }
+          input{
+            display: inline-block;
+            margin-top:$global-margin;
+               @include breakpoint(medium) {
+                max-width: 50%;
+               }
+          }
+        }
+        .cart_total {
+              font-size: .85rem!important;
+              font-weight: 600;
+          b {
+              color: $alert-color;
+              font-weight: 900;
+          }
+        }
+
+      }
+    }
+    // input ship/bill
+    .bill_ship-to-um {
+        font-size: .85rem;
+        &>div{
+          margin-bottom:$global-margin;
+        }
+        #tpl_bill_to {
+            padding: $global-padding;
+            background: #f3f4f6;
+            text-transform: lowercase;
+            #tpl_bill_to_title,
+            #tpl_bill_to_button a{
+              color:$alert-color;
+              font-weight:900;
+            }
+            #tpl_bill_to_info{
+              &:first-letter{
+                text-transform: uppercase;
+              }
+            }
+        }
+        #tpl_ship_to{
+          padding: $global-padding;
+          background: #f3f4f6;
+          text-transform: lowercase;
+          #tpl_ship_to_title,
+          #tpl_ship_to_button a{
+            color:$alert-color;
+            font-weight:900;
+          }
+          #tpl_ship_to_info{
+            &:first-letter{
+              text-transform: uppercase;
+            }
+          }
+        }
+    }
+    form#pay_loyalty_points_form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #payment_loyalty_points {
+        background: #f3f4f6;
+        padding: $global-padding;
+    }
+    #payment_loyalty_points_forms {
+        margin-top: $global-padding;
+    }
+    #payment_loyalty_points_content {
+      @include breakpoint(medium) {
+        max-width: 70%;
+      }
+        font-size: .7rem;
+    }
+    input#pay_loyalty_points_use {
+        @include breakpoint(medium) {
+          max-width: 40%;
+          margin:0;
+        }
+    }
+    input#pay_loyalty_points_apply{
+      margin:0;
+    }
+    // pay method
+    .pay-method-um {
+        padding:$global-padding;
+        background:$white;
+        font-size: .85rem;
+        #payment_loyalty_points_title{
+          color:$alert-color;
+          font-weight: 900;
+        }
+    }
+  }
