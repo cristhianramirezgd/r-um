@@ -427,6 +427,22 @@ li.etalage_icon {
     #address_selection .formtable td {
         background: #f3f4f6;
     }
+    #address_selection table td a {
+      width: auto;
+      display: inline-block;
+      color: $alert-color;
+      &:hover{
+      	color:$warning-color;
+      }
+    }
+    div#address_selection>table {
+      width: auto!important;
+    }
+
+    div#address_selection>table tr td {
+      width: 100%;
+      display: block;
+    }
     // Whislist
     .wishlist-title{
 			font-size: 1rem;
@@ -549,21 +565,6 @@ li.etalage_icon {
 			}
 	}
 }
-// imputchip customer
-.inputship-um{
-	.steps-pay-um {
-	  position: relative;
-	}
-	.steps-pay-um::after {
-	  content: '';
-	  border-bottom: rem-calc(4px) solid $warning-color;
-	  display: block;
-	  position: absolute;
-	  top: 50%;
-	  left: 0;
-	  right: 0;
-	  z-index: -1;
-	}
 	#tpl_steps {
 		#steps_checkout_info {
 			  display: flex;
@@ -572,6 +573,27 @@ li.etalage_icon {
 			  text-align: center;
 			}
 	}
+.steps-pay-um {
+  position: relative;
+  &:after {
+  	content: '';
+  	border-bottom: rem-calc(4px) solid $warning-color;
+  	display: block;
+  	position: absolute;
+  	top: 50%;
+  	left: 0;
+  	right: 0;
+  	z-index: -1;
+	}
+}
+#myaccount_orders_orders_placed{
+	 h2 {
+	  font-size: .85rem;
+	  color: $alert-color;
+	}
+}
+// imputchip customer
+.inputship-um{
 	#tpl_logout {
 			  text-align: right;
 		a {
