@@ -1,9 +1,26 @@
 //Banner Middle
+// middle banner home
+.circle-button {
+  position: relative;
+}
 .banner-home-middle {
   padding: $global-padding 0;
 }
 .buttons-middle-banner {
   width: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom:$global-margin*2;
+  a {
+  	transition: all 0.25s ease-out;
+    border-color:$white!important;
+    color:$white!important;
+    &:hover{
+    	background: rgba($white, .5)!important;
+    	color:$dark-gray!important;
+    }
+  }
 }
 // carousel brands
 .top-brand-title {
