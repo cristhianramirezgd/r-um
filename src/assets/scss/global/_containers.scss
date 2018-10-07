@@ -645,6 +645,63 @@ button.ui-dialog-titlebar-close {
 	    margin-left:3px;
 	}
 }
+// compare products
+#prod_compare_bar {
+  background: rgba($warning-color,.95);
+  padding: $global-padding/2;
+  margin: 0 auto;
+  color: $white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 9;
+  box-shadow: 1px 1px 10px rgba($dark-gray,.2);
+  @include breakpoint(medium) {
+  max-width: 50vw;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 900;
+    background: $black;
+    padding: $global-padding/2;	
+    #prod_compare_bar_num {
+    	$size: rem-calc(30px);
+      font-size: 1.2rem;
+      background: $alert-color;
+      height: $size;
+      width: $size;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 100%;
+  		box-shadow: 1px 1px 10px rgba($dark-gray,.2);
+    }
+  }
+  button{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    font-family: inherit;
+    padding: 0.85em $global-padding;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0.1875rem;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: $success-color;
+    color: $white;
+    &:hover{
+      background:scale-color($success-color, $lightness: -14%);
+    }
+  }
+}
+
 // filters
 .categories-filter{
 	 ul {
