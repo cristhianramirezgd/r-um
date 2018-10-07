@@ -1020,13 +1020,247 @@ li.etalage_icon {
       margin:0;
     }
     // pay method
-    .pay-method-um {
-        padding:$global-padding;
-        background:$white;
-        font-size: .85rem;
-        #payment_loyalty_points_title{
-          color:$alert-color;
-          font-weight: 900;
+    .pay-method-um {       
+        #payment_discounts {
+          background: $light-gray;
+          line-height: 2;
+          padding: 8px 20px;
+          border: 1px solid $light-gray;
+          width: 80%;
+          font-size: 14px
+        }
+
+        #payment_discounts #discount_name {
+          padding: 1px
+        }
+
+        #validar_codigo_descuento {
+          color: $dark-gray;
+          background: #warning-color;
+          padding: 4px 8px;
+          text-decoration: none
+        }
+
+        #payment_cust_balance,
+        #payment_loyalty_points {
+          margin-top: 15px
+        }
+
+        #payment_cust_balance_title,
+        #payment_loyalty_points_title {
+          background-color: #eee;
+          color: #aaa;
+          font-weight: 700;
+          padding: 8px
+        }
+
+        #payment_cust_balance_content,
+        #payment_loyalty_points_content {
+          padding: 8px;
+          border-left: 1px solid $medium-gray;
+          border-right: 1px solid $medium-gray;
+          border-bottom: 1px solid $medium-gray
+        }
+
+        #payment_cust_balance_forms,
+        #payment_loyalty_points_forms {
+          text-align: right
+        }
+
+        #pay_cust_balance_form,
+        #pay_cust_balance_form_remove,
+        #pay_loyalty_points_amt,
+        #pay_loyalty_points_form,
+        #pay_loyalty_points_form_remove {
+          text-align: right;
+          display: inline-block
+        }
+
+        #pay_cust_balance_amt,
+        #pay_loyalty_points_use {
+          text-align: right;
+          width: 100px
+        }
+
+        #pay_cust_balance_apply,
+        #pay_loyalty_points_apply {
+          margin-left: 10px
+        }
+
+        #payment_methods_content .tabs {
+          position: relative;
+          min-height: 270px;
+          clear: both
+        }
+
+        #payment_methods_content .tab {
+        	width:100%;
+          @include breakpoint(medium) {
+          	width: 300px
+          }
+        }
+
+        #payment_methods_content .tab>label {
+          padding: $global-padding;
+          border-bottom: 1px solid $medium-gray;
+          display: flex;
+          color: $black;
+          font-weight: 700;
+          transition: all 0.25s ease-out;
+          margin-left:0;
+          &:hover{
+          	background: $alert-color;
+          	margin:0;
+          	color:$white;
+          }
+        }
+
+        #payment_methods_content .tab [type=radio] {
+          display: none;
+          transition: all 0.25s ease-out;
+        }
+
+        #payment_methods_content .pay_method_option {
+          @include breakpoint(medium) {
+          	position: absolute;
+          	left: 300px;
+          	top: 0;
+          	right: 0;
+          	bottom: 0;
+          	min-height: 230px;
+          }
+          background: $white;
+          padding: $global-padding;
+          border: 1px solid $medium-gray;
+        }
+
+        #payment_methods_content .tab [type=radio]:checked~label {
+          background: $alert-color;
+          z-index: 2;
+          color: $white;
+          margin:0;
+        }
+
+        #myaccount_new_form,
+        #myaccount_new_title {
+          background: $alert-color;
+          padding: $global-padding;
+        }
+
+        #payment_methods_content .tab [type=radio]:checked~label~.pay_method_option {
+          z-index: 1
+        }
+
+        .pay_method_image,
+        .pay_method_title {
+          align-self: center
+        }
+
+        .pay_method_image img {
+          width: 40px
+        }
+
+        .pay_method_title {
+          padding-left: $global-padding;
+        }
+
+        #payment_methods_title {
+          color: $alert-color;
+          font-size: 16px;
+          padding: $global-padding 0;
+          border-bottom: 1px solid $light-gray;
+        }
+
+        #cho_pay_meth_form_cc {
+          // margin-left: 80px
+        }
+
+        #cho_pay_meth_cc_number .cho_form_input {
+          width: 256px
+        }
+
+        #cho_pay_meth_cc_number #ccnum {
+          width: 258px;
+          font-size: 100%
+        }
+
+        #cho_pay_meth_cc_cardid .cho_form_input {
+          float: left;
+          width: 138px
+        }
+
+        #cho_pay_meth_cc_cardid #ccid {
+          width: 140px
+        }
+
+        #cc_id_info {
+          float: left;
+          padding: $global-padding;
+        }
+
+        #cho_pay_meth_cc_installments {
+          clear: both
+        }
+
+        #cho_pay_meth_cc_expdate .cho_form_label,
+        #cho_pay_meth_cc_installments .cho_form_label {
+          display: block;
+          float: left;
+          margin: $global-margin;
+        }
+
+        #cho_pay_meth_cc_installments #installments {
+          width: 95px
+        }
+
+        #cho_pay_meth_desc_pse {
+          margin-bottom: 10px
+        }
+
+        #discount_name {
+          width: 120px
+        }
+
+        #form_pse select {
+          margin: 10px;
+          width: 350px;
+          text-transform: uppercase
+        }
+
+        #payment_terms_conditions {
+          padding: $global-padding;
+          text-align: right
+        }
+
+        #cc_id_open,#terms_open {
+          text-decoration: underline
+        }
+
+        #cc_id_modal {
+          max-width: 400px
+        }
+
+        .payment_place_order_button {
+          margin-top: 10px;
+          text-align: right
         }
     }
+    div#cho_pay_meth_form_cc form>div {
+      float: left;
+      width: 50%;
+      grid-column: 1fr 1fr;
+    }
+
+    div#cho_pay_meth_cc_expdate > div {
+      display: flex;
+      margin: 0;
+    }
+
+    .cho_form_label {
+      display: none;
+    }
+
+    div#cho_pay_method_tabs form input {
+      margin: 0;
+      }
   }
