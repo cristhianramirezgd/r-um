@@ -338,6 +338,7 @@ button.ui-dialog-titlebar-close {
 	  @include breakpoint(medium) {
 	  	max-width: 25%;
 	  	max-height: rem-calc(450px);
+	  	min-height: rem-calc(450px);
 	  }
 	   a{
 	    color:black;
