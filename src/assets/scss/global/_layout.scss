@@ -170,6 +170,7 @@ font-weight: 900;
   top: 3rem;
   right: 0;
   z-index: 1;
+  font-size: 0;
 }
 .out_of_stock {
   background: #333;
@@ -333,6 +334,49 @@ li.etalage_icon {
     content: 'del producto con este peso';
   }
 }
+// visited product
+div#info_product {
+  display: none;
+}
+#product_recently_visited_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+#product_recently_visited {
+	margin-bottom:$global-margin;
+	#product_recently_visited_title {
+	  font-size: 1.5rem;
+	  color: $alert-color;
+	  font-weight: 900;
+	  margin-bottom:$global-margin;
+	}
+}
+
+#product_recently_visited_content {
+	.product_recently_visited_item {
+	  background: $white;
+	  max-width: 20%;
+	  padding: $global-padding/2;
+	  transition: all 0.25s ease-out;
+	  margin-bottom:$global-margin;
+	  	border:rem-calc(1px) solid transparent;
+	  &:hover{
+	  	border:rem-calc(1px) solid $light-gray;
+	  }
+	}
+}
+
+.product_recently_visited_item .product_recently_visited_item_bottom{
+  font-weight: 900;
+  &:first-letter {
+  text-transform: uppercase;
+	}
+	a{
+	  text-transform: lowercase;
+	}
+}
+
+
 // checkout
 .main-account-um{
   display: flex;  
