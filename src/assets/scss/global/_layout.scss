@@ -1439,10 +1439,6 @@ input#adi_prd {
           border-bottom: 1px solid $light-gray;
         }
 
-        #cho_pay_meth_form_cc {
-          // margin-left: 80px
-        }
-
         #cho_pay_meth_cc_number .cho_form_input {
           width: 256px
         }
@@ -1454,16 +1450,17 @@ input#adi_prd {
 
         #cho_pay_meth_cc_cardid .cho_form_input {
           float: left;
-          width: 138px
         }
 
         #cho_pay_meth_cc_cardid #ccid {
-          width: 140px
+          width: 96%;
         }
 
         #cc_id_info {
           float: left;
-          padding: $global-padding;
+          a{
+          	color:$alert-color;
+          }
         }
 
         #cho_pay_meth_cc_installments {
@@ -1474,7 +1471,6 @@ input#adi_prd {
         #cho_pay_meth_cc_installments .cho_form_label {
           display: block;
           float: left;
-          margin: $global-margin;
         }
 
         #cho_pay_meth_cc_installments #installments {
@@ -1497,7 +1493,13 @@ input#adi_prd {
 
         #payment_terms_conditions {
           padding: $global-padding;
-          text-align: right
+          text-align: right;
+          padding: $global-padding/2;
+          text-align: right;
+          font-size: .85rem;
+          a {
+             color: $alert-color;
+           }
         }
 
         #cc_id_open,#terms_open {
@@ -1509,23 +1511,80 @@ input#adi_prd {
         }
 
         .payment_place_order_button {
-          margin-top: 10px;
           text-align: right
         }
     }
-    #cho_pay_meth_form_cc form>div {
-      float: left;
-      width: 50%;
-      grid-column: 1fr 1fr;
+    form#form_cc {
+      display: flex;
+      flex-wrap: wrap;
     }
 
+    div#cho_pay_meth_cc_cardid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    div#cho_pay_meth_cc_cardid div {
+      width: 100%;
+    }
+    #cho_pay_meth_form_cc{
+    	display: flex;
+    }
+    #cho_pay_meth_form_cc form>div {
+      float: left;
+      margin-bottom:$global-margin;
+      width: 100%;
+      @include breakpoint(medium) {
+      	width: 50%;
+      }
+    }
+    div#cho_pay_meth_cc_expdate .cho_form_label {
+      width: 100%;
+      margin: 0!important;
+    }
+
+    div#cho_pay_meth_cc_expdate {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    div#cho_pay_meth_cc_tokenize {
+      width: 100%!important;
+      border-top: rem-calc(1px) solid gray;
+      border-bottom: rem-calc(1px) solid gray;
+      padding: $global-margin 0;
+      margin-top: $global-padding;
+      display: flex;
+      align-items: center;
+    }
+    div#cc_installments select {
+      width: 100%!important;
+      display: block;
+    }
+
+    div#cho_pay_meth_cc_installments .cho_form_label{
+      display:block;
+      font-size:.85rem;
+      margin:0;
+    }
+    .cho_form_input label {
+      display: none;
+    }
+    div#cho_pay_meth_cc_tokenize .cho_form_label {
+      display: block;
+    }
+
+    div#cho_pay_meth_cc_tokenize .cho_form_input {
+      margin-right: .5rem;
+    }
     #cho_pay_meth_cc_expdate > div {
       display: flex;
       margin: 0;
+      align-items:center;
+      width: 100%;
     }
 
     .cho_form_label {
-      display: none;
+      font-size:.85rem;
     }
 
     #cho_pay_method_tabs form input {
