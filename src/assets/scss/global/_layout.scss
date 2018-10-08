@@ -148,7 +148,7 @@ font-weight: 900;
 .title-product-um{
 	@include text-capital($global-margin 0);
   border-left: rem-calc(3px) solid $alert-color;
-  padding:$global-padding;
+  padding:$global-padding/2;
     @include breakpoint(medium) {
 	   padding: 0 $global-padding;
     }
@@ -197,15 +197,17 @@ font-weight: 900;
 	right: 0;
 }
 #product_review_score {
-    display: flex;
-    align-items: center;
     color:$dark-gray;
     font-size:.8rem;
-    justify-content: space-around;
     padding:0 $global-padding;
-    max-width:rem-calc(500px);
     border-top:1px solid $light-gray;
     border-bottom:1px solid $light-gray;
+		@include breakpoint (medium) {
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-around;
+	    max-width:rem-calc(500px);
+		}
      a{
         color:$dark-gray;
     }
@@ -236,6 +238,7 @@ font-weight: 900;
 	table {
 	  width: 100%!important;
 		border-bottom:rem-calc(3px) solid $warning-color;
+		background:$white!important;
 			 tr {
 		    border-bottom: 1px solid $light-gray!important;
 		    border-top: 0!important;
@@ -268,6 +271,10 @@ ul#etalage {
     height: auto!important;
     float: none!important;
     margin-bottom: rem-calc(80px)!important;
+    li{
+    	top: auto!important;
+    	margin-top: .5rem;
+    }
 }
 li.etalage_thumb.etalage_thumb_active {
     width: 100%;
@@ -298,8 +305,10 @@ li.etalage_icon {
     font-weight:900;
     font-size:0;
     color:$dark-gray;
-    padding-top: $global-padding;
-    padding-left: $global-padding;
+    @include breakpoint (medium) {
+    	padding-top: $global-padding;
+    	padding-left: $global-padding;
+    }
     .suggested_price{
      font-size:1rem;
      width:100%;
@@ -312,12 +321,35 @@ li.etalage_icon {
      display:block;
     }
 }
-#product_variants> select {
-    max-width: initial;
-    width: auto;
-    border-radius: 0;
-    border-left: 0;
-    border-right: 0;
+.link-reviews-um {
+	margin:$global-margin 0;
+	text-align: center;
+	@include breakpoint(medium) {
+		margin:0;
+		text-align: left;
+	}
+	#reviews-um {
+	  color: $alert-color;
+	  text-align: right;
+	  padding:$global-padding;
+	}
+}
+div#product_share{
+	margin:$global-margin 0;
+	@include breakpoint(medium) {
+		margin:0;
+	}
+}
+.share-social-media-um #product_share {
+  @include breakpoint(medium) {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	iframe {
+		  margin: $global-margin!important;
+		}
+  }
 }
 input#adi_prd {
   position: fixed;
@@ -330,12 +362,12 @@ input#adi_prd {
   @include breakpoint (medium) {
   	width: auto;
   	position: initial;
+  	margin: 0 0 $global-margin 0;
   }
 }
 .button_prod_add.button_add_long {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 1rem 0;
     font-family: inherit;
     padding: 0.85em 1em;
     -webkit-appearance: none;
@@ -364,8 +396,27 @@ input#adi_prd {
 }
 #product_variants {
     padding: 0 $global-padding;
+    position:relative;
     &>select{
       margin:0;
+      border-radius: 0;
+      border-left: 0;
+      border-right: 0;
+      @include breakpoint(medium) {
+      max-width: initial;
+      width: auto;
+      }
+    }
+    .specs_title_select{
+    	&:after {
+    	      @include breakpoint (medium) {
+    	      	content: '▼';
+    	      	font-size: 1rem;
+    	      	position: absolute;
+    	      	left: rem-calc(80px);
+    	      	top: .5rem;
+    	      }
+    	    }
     }
 }
 #quantity_selects_div {
@@ -495,19 +546,30 @@ input#adi_prd {
 	  font-weight: 900;
 	  margin: $global-margin/2 0;
 	}
-	div#product_reviews_content {
+	#product_reviews_content {
 	  font-size: .85rem;
+	 & > a.button {
+	  display: block;
+	  float: none!important;
+	  margin: 0 auto $global-margin auto;
+	  padding: 0.85em $global-padding;
+	  font-weight: 900;
+	  @include breakpoint(medium) {
+	  	max-width: 30vw;
+	  	}
+		}
 	}
-
 	.prod_review_item {
-	  margin-bottom: 1rem;
+	  margin-bottom: $global-margin;
 	}
 
 	.prod_review_item {
 	  display: flex;
 	  flex-wrap: wrap;
 	}
-
+	#coment_a_ver {
+	  max-width: rem-calc(46px);
+	}
 	.prod_review_author {
 	  color: gray;
 	  width: 100%;
