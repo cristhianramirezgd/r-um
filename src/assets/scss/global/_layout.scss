@@ -932,13 +932,15 @@ div#steps_checkout_info .step_resaltado {
     color: $alert-color;
   }
 }
-div#payment_discounts {
-  display: block;
-  width: 100vw;
-}
+@include breakpoint (medium down) {
+	div#payment_discounts {
+	  display: block;
+	  width: 100vw;
+	}
 
-.input-pay-um #order_details .cart_table tr {
-  display: block;
+	.input-pay-um #order_details .cart_table tr {
+	  display: block;
+	}
 }
 #num_normal{
 		$size:rem-calc(30px);
@@ -969,7 +971,7 @@ div#payment_discounts {
   }
 }
 #step_1 {
-  display: flex;
+  display: flex!important;
   align-items: center;
   text-align: center;
 
@@ -1391,7 +1393,15 @@ div#payment_discounts {
       margin:0;
     }
     // pay method
-    .pay-method-um {       
+    .pay-method-um { 
+    table.cart_table {
+      display: block;
+      max-width: 100%;
+    }
+    table.cart_table tbody {
+      max-width: 100%;
+      display: block;
+    }      
         #payment_discounts {
           background: $light-gray;
           line-height: 2;
