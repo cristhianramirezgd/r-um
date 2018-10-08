@@ -69,3 +69,6 @@ table.container_table tbody {
 table tbody tr:nth-child(even){
     background: $white;
 }
+.dpr_in_stock, span.in_stock {
+  display: none;
+}
