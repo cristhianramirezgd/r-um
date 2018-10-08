@@ -7,20 +7,6 @@ body{
       max-width: rem-calc(140px);
   }
 }
-.navigation-um{
-	>div{
-		a{
-			display: block;
-			border-radius: 0;
-			margin-bottom: 0;
-			font-weight: 600;
-      display: flex;
-      max-height: 2rem;
-      align-items: center;
-      justify-content: space-around;
-		}
-	}
-}
 .badge.warning{
 	color:$white;
 }
