@@ -5,6 +5,7 @@
 }
 .banner-home-middle {
   padding: $global-padding 0;
+  margin: 0 auto;
 }
 .buttons-middle-banner {
   width: 100%;
@@ -1590,4 +1591,7 @@ input#adi_prd {
     #cho_pay_method_tabs form input {
       margin: 0;
       }
+  }
+  div#payment_loyalty_points {
+    display: none!important;
   }
