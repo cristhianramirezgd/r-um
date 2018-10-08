@@ -222,6 +222,9 @@ font-weight: 900;
       max-height: $size+(rem-calc(8px));
     }
 }
+#etalage .etalage_icon{
+	top:0!important;
+}
 #product_description_title,
 #product_specs_title {
   font-weight: 900;
@@ -273,7 +276,9 @@ ul#etalage {
     float: none!important;
     margin-bottom: rem-calc(80px)!important;
     li{
-    	top: auto!important;
+    	@include breakpoint(medium down) {
+    		top: auto!important;
+    	}
     	margin-top: .5rem;
     }
 }
@@ -824,7 +829,7 @@ input#adi_prd {
 				  }
 				  .js_remove {
 				  	a {
-					    color: red;
+					    color: $alert-color;
 					    font-size: .85rem;
 					  }
 				  }
@@ -857,6 +862,7 @@ input#adi_prd {
 			  justify-content: space-around;
 			  align-items: center;
 			  text-align: center;
+			  flex-wrap:wrap;
 			}
 	}
 .steps-pay-um {
@@ -878,6 +884,102 @@ input#adi_prd {
 	  color: $alert-color;
 	}
 }
+div#steps_checkout_info > div {
+  background: white;
+  align-self: stretch;
+  justify-content: stretch;
+  width: 100%;
+  display: flex;
+  @include breakpoint (medium) {
+  	display:block;
+  	padding: 1rem;
+  	width: 25%;
+  }
+}
+
+div#steps_checkout_info > .clear {
+  display: none;
+}
+
+div#steps_checkout_info .step_resaltado {
+  border-top: rem-calc(2px) solid $warning-color;
+  border-bottom: rem-calc(2px) solid $warning-color;
+  font-weight: 900;
+  color: $alert-color;
+}
+
+#steps_checkout_info .step_normal {
+  color: $dark-gray;
+  font-weight:900;
+  transition: all 0.25s ease-out;
+  @include breakpoint (medium) {
+  	&:hover {
+  	  color:white;
+  	  background:$alert-color;
+  	  font-weight:900;
+  	  border-top: rem-calc(2px) solid $white;
+  	  border-bottom: rem-calc(2px) solid $white;
+  	   a{
+  	    color: $white;
+  	  }
+  	  #num_normal{
+  	  	background: $white;
+  	  	color: $alert-color;
+  	  }
+  	}
+  }
+   a{
+    color: $alert-color;
+  }
+}
+div#payment_discounts {
+  display: block;
+  width: 100vw;
+}
+
+.input-pay-um #order_details .cart_table tr {
+  display: block;
+}
+#num_normal{
+		$size:rem-calc(30px);
+	  width: $size;
+	  height: $size;
+	  vertical-align: middle;
+	  line-height: $size;
+	  display: block;
+	  background: $light-gray;
+	  color: $dark-gray;
+	  border-radius: 100%;
+	  @include breakpoint (medium) {
+	  margin: 0 auto;
+	  }
+}
+#num_resaltado {
+	$size:rem-calc(30px);
+  width: $size;
+  height: $size;
+  vertical-align: middle;
+  line-height: $size;
+  display: block;
+  background: $alert-color;
+  color: $white;
+  border-radius: 100%;
+  @include breakpoint (medium) {
+  margin: 0 auto;
+  }
+}
+#step_1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  & > div {
+    margin: 0 auto;
+    color: $alert-color;
+    font-weight: 900;
+  }
+}
+
 // imputchip customer
 .inputship-um{
   .cart-resume-um {
