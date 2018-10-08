@@ -31,6 +31,41 @@ $app-dashboard-top-nav-height: rem-calc(55);
 .vertical-menu-um{
 	position:relative;
 }
+//responsive clases hamburguer menu
+@include breakpoint(medium down) { 
+	.hamburguer-icon-um {
+	  position: relative;
+	  left: 0.46875rem;
+	  font-size: 2rem;
+
+	}
+	.navigation-um {
+	  background: $white;
+	  box-shadow: 0px 1px 3px rgba($black,.2);
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  z-index: 99999;
+	  display: none;
+	}
+	.formsearchcontainer {
+	  padding: $global-padding/2;
+	}
+	.fixed-top-nav{
+		.logo-um-mobile{
+			img {
+					  max-width: 30vh;
+					}
+		}
+		.hamburguer-icon-um{
+			font-size: 1rem
+		}
+		.formsearchcontainer {
+		  padding-top:0;
+		}
+	}
+}
+
 // megamenu main navigation total code
 #left_grupos_slide1 {
   background: $white;
