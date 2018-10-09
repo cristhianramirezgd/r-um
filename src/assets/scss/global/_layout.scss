@@ -790,6 +790,34 @@ input#adi_prd {
 }
 
 // Carrito de compras
+.checkout-um{
+	.cart_table tr td:nth-of-type(4) {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: space-around;
+		  align-items: center;
+			margin: $global-margin/2 0;
+		}
+
+		.js_subtract {
+		  width: 30%;
+		}
+
+		.list-item-checkout-um #cart_container #recalculateform td .small.prd_qty_vc.im-enteros {
+		  width: 40%;
+		}
+
+		.js_add {
+		  width: 30%;
+		}
+
+		.js_remove {
+		  width: 100%;
+		}
+		.list-item-checkout-um #cart_container #recalculateform tr:last-child td {
+		  text-align: right!important;
+		}
+}
 .list-item-checkout-um{
 	#cart_container{
 		@include breakpoint(medium) {
@@ -804,11 +832,15 @@ input#adi_prd {
 		}
 			#recalculateform{
 				img{
-					max-width: 100px;
+					max-width: 60px;
 				}
 				td {
 				  padding: 0 $global-padding;
 				  vertical-align: middle;
+				  text-align: center;
+				  &:nth-of-type(2){
+				  	text-align: left;
+				  }
 				  &>a{
 				  	color:$dark-gray;
 				  	text-transform: lowercase;

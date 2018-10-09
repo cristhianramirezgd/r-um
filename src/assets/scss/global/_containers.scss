@@ -123,7 +123,12 @@ a.listname {
 // vitrina home
 .banner-one, .banner-two {
   >div{
-  	min-height: rem-calc(520px);
+  	@include breakpoint (medium) {
+  		min-height: rem-calc(520px);
+  	}
+  	@include breakpoint (medium down) {
+  		padding:$global-padding 0;
+  	}
   	overflow: hidden;
   }
   .gr_name {
