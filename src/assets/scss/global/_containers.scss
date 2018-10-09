@@ -659,7 +659,44 @@ button.ui-dialog-titlebar-close {
     }
   }
 }
-
+// shot by
+#tpl_sort_by {
+  position:relative;
+  @include breakpoint(medium) {
+    select{
+  	width: 40%;
+    }
+  }
+  &:hover{
+    select{
+      @include breakpoint(medium) {
+        display:block;
+      }
+    }
+  }
+  span{
+    background:$medium-gray;
+    vertical-align:middle;
+    border-radius:3px;
+    font-weight:600;
+    color:$white;
+    display: block;
+      @include breakpoint(medium) {
+    		padding:$global-padding/2 $global-padding;
+    		width: 100%;
+  		}
+    }
+    select{
+      @include breakpoint(medium) {
+        width:auto;
+        position: absolute;
+        top: 100%;
+        z-index: 9;
+        right: 0;
+        display:none;
+      }
+    }
+}
 // filters
 .categories-filter{
 	 ul {
@@ -678,5 +715,12 @@ button.ui-dialog-titlebar-close {
 @include breakpoint (medium down) {
 	.filter-mobile-subcategories{
 		display: none;
+	}
+	div#tpl_sort_by span {
+	  font-size: .85rem;
+	  color: $dark-gray;
+	  text-align:right;
+	  background: 0;
+	  padding: 0;
 	}
 }

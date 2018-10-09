@@ -33,44 +33,10 @@
 .top-brand-carousel {
   padding: 0 $global-padding $global-padding;
 }
-#tpl_sort_by {
-  position:relative;
-  @include breakpoint(medium) {
-    select{
-  	width: 40%;
-    }
-  }
-  &:hover{
-    select{
-      @include breakpoint(medium) {
-        display:block;
-      }
-    }
-  }
-  span{
-    background:$medium-gray;
-    padding:$global-padding/2 $global-padding;
-    vertical-align:middle;
-    border-radius:3px;
-    font-weight:600;
-    color:$white;
-    width: 100%;
-    display: block;
-    }
-    select{
-      width: 100%;
-      @include breakpoint(medium) {
-        width:auto;
-        position: absolute;
-        top: 100%;
-        z-index: 9;
-        right: 0;
-        display:none;
-      }
-    }
-}
 .navigation-category-um{
-    padding:$global-padding;
+    @include breakpoint(medium) {
+    	padding:$global-padding;
+    }
 }
 // component autocomplete search
 ul#ui-id-1 {
