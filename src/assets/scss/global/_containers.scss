@@ -724,3 +724,80 @@ button.ui-dialog-titlebar-close {
 	  padding: 0;
 	}
 }
+// producto del día
+.product-slide{
+
+	  background: $white;
+	  @include breakpoint(medium) {
+	  margin-bottom:$global-margin;
+	}
+
+	.dpr_container > a {
+	  display: flex;
+	  line-height: 1.2;
+	  align-items: center;
+	  .dpr_imagen_thumb {
+				img{
+					max-width: 80px;
+					@include breakpoint(medium) {
+					  	  max-width:120px;
+					  	}
+			}
+	  }
+	}
+	.gr_name,
+	.prod_compare,
+	.dpr_product-list-add-button {
+	  display: none;
+	}
+	.dpr_prod_quick_view {
+	  display: none;
+	}
+	.dpr_listprice {
+	  text-align: right;
+	  font-weight: 900;
+	  padding:0 $global-padding;
+	  @include breakpoint(medium) {
+	  	font-size: 1.5rem;
+	  	padding: $global-padding;
+	  }
+	}
+	.day-ofert{
+	  display:flex;
+	  background:$warning-color;
+	  	@include breakpoint(medium) {
+	  	position: relative;
+	  border-radius: rem-calc(10px) 0 0 rem-calc(10px);
+	  	&::after {
+	  		  	$size:rem-calc(30px);
+	  			  content: '';
+	  			  width: $size;
+	  			  height: $size;
+	  			  position: absolute;
+	  			  right: -15px;
+	  			  top: 40%;
+	  			  background: $warning-color;
+	  			  display: block;
+	  			  z-index: 1;
+	  			  transform: rotate(45deg);
+	  	}
+		}
+	}
+	.day-ofert h2 {
+	  align-self: center;
+	  color:scale-color($warning-color, $lightness: -30%);;
+	  font-weight:900;
+	  text-align:center;
+	  line-height: 1;
+	  @include breakpoint(medium) {
+	  	padding:$global-padding;
+	  }
+	}
+	.dpr_product-name {
+	  color: $dark-gray;
+	  font-weight: 900;
+	  @include breakpoint (medium) {
+	  	padding: $global-padding;
+	  }
+	}
+}
