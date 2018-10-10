@@ -732,18 +732,21 @@ button.ui-dialog-titlebar-close {
 	  margin-bottom:$global-margin;
 	}
 
-	.dpr_container > a {
-	  display: flex;
-	  line-height: 1.2;
-	  align-items: center;
-	  .dpr_imagen_thumb {
-				img{
-					max-width: 80px;
-					@include breakpoint(medium) {
-					  	  max-width:120px;
-					  	}
+	.dpr_container {
+		position:relative;
+		& > a {
+			  display: flex;
+			  line-height: 1.2;
+			  align-items: center;
+			  .dpr_imagen_thumb {
+						img{
+							max-width: 80px;
+							@include breakpoint(medium) {
+							  	  max-width:120px;
+							  	}
+					}
+			  }
 			}
-	  }
 	}
 	.gr_name,
 	.prod_compare,
@@ -759,8 +762,21 @@ button.ui-dialog-titlebar-close {
 	  padding:0 $global-padding;
 	  @include breakpoint(medium) {
 	  	font-size: 1.5rem;
-	  	padding: $global-padding;
+	  	padding: $global-padding/2;
+	  	display: inline-block;
 	  }
+	}
+	.dpr_suggested_price{
+		text-decoration: line-through;
+		padding:0 $global-padding;
+		text-align: right;
+		font-size: .85rem;
+		color:$dark-gray;
+		@include breakpoint(medium) {
+		padding: $global-padding/2;
+		width: 49%;
+		display: inline-block;
+		}
 	}
 	.day-ofert{
 	  display:flex;
@@ -799,5 +815,14 @@ button.ui-dialog-titlebar-close {
 	  @include breakpoint (medium) {
 	  	padding: $global-padding;
 	  }
+	}
+
+	.wrapper-ribbon {
+	    position: absolute;
+	    background: $alert-color;
+	    padding: 2px;
+	    color: $white;
+	    font-weight: 900;
+	    right: 0;
 	}
 }
