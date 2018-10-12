@@ -221,7 +221,6 @@ a.listname {
 		font-size: .8rem!important;
 		text-decoration: line-through;
 		padding:$global-padding 0 0 0;
-		color:$dark-gray !important;
 	}
 	.wrapper-ribbon {
 	  position: absolute;
@@ -432,7 +431,6 @@ button.ui-dialog-titlebar-close {
 	  font-size: .8rem;
 	  text-decoration: line-through;
 	  padding: 0 $global-padding;
-	  color:$dark-gray;
 	}
 	.dpr_listprice{
 	  padding: 0 $global-padding;
@@ -771,7 +769,6 @@ button.ui-dialog-titlebar-close {
 		padding:0 $global-padding;
 		text-align: right;
 		font-size: .85rem;
-		color:$dark-gray;
 		@include breakpoint(medium) {
 		padding: $global-padding/2;
 		width: 49%;
@@ -805,6 +802,7 @@ button.ui-dialog-titlebar-close {
 	  font-weight:900;
 	  text-align:center;
 	  line-height: 1;
+	  width: 100%;
 	  @include breakpoint(medium) {
 	  	padding:$global-padding;
 	  }
