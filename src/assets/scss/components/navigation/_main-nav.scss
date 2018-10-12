@@ -42,11 +42,13 @@ $app-dashboard-top-nav-height: rem-calc(55);
 
 	}
 	.navigation-um {
-	  background: $white;
+	  background: rgba($white,.9);
 	  box-shadow: 0px 1px 3px rgba($black,.2);
 	  position: absolute;
 	  left: 0;
 	  right: 0;
+	  max-height: 100vh;
+	  height: 100vh;
 	  z-index: 99999;
 	  display: none;
 	}
@@ -67,7 +69,7 @@ $app-dashboard-top-nav-height: rem-calc(55);
 		}
 	}
 	.navigation-um > div > a{
-		padding:$global-padding*2 $global-padding;
+		padding:$global-padding $global-padding;
 	}
 }
 .navigation-um a {
@@ -236,6 +238,8 @@ $app-dashboard-top-nav-height: rem-calc(55);
 	     display: flex;
 	     margin:0;
 	     background: #f3f4f6;
+	     font-size: .85rem;
+		 flex-wrap: wrap;
 	     .page-item{
 	         padding:rem-calc(5px);
 	         align-self:center;
