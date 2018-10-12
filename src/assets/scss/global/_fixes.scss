@@ -156,10 +156,18 @@ div#quick_view_text {
   font-weight: 600!important;
 }
 .button_def {
-  @include breakpoint(medium down){
+  @include breakpoint(medium down) {
         width: 100%;
   }
 }
 main.product-um #addproductform .button_def {
     font-size:1rem!important;
+}
+// car mobile
+.car-mobile {
+  div#car-info-mobile-um{
+    background: $alert-color;
+    border-radius: $global-radius;
+    padding: rem-calc(1px);
+  }
 }
