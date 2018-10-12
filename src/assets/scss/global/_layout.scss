@@ -798,12 +798,20 @@ input#adi_prd {
 		}
 			#recalculateform{
 				img{
-					max-width: 60px;
+          @include breakpoint(medium) {
+            max-width: rem-calc(50px);
+          }
+					max-width: rem-calc(60px);
 				}
 				td {
-				  padding: 0 $global-padding;
-				  vertical-align: middle;
-				  text-align: center;
+          vertical-align: middle;
+          text-align: center;
+          font-size: .7rem;
+          padding: 0 rem-calc(5px);
+          @include breakpoint(medium) {
+				    padding: 0 $global-padding;
+            font-size: .85rem;
+          }
 				  &:nth-of-type(2){
 				  	text-align: left;
 				  }
@@ -811,6 +819,10 @@ input#adi_prd {
 				  	color:$dark-gray;
 				  	text-transform: lowercase;
 				  	font-weight: 900;
+            font-size: .7rem;
+            @include breakpoint(medium) {
+              font-size: .85rem;
+            }
 				  	&:first-letter{
 				  		text-transform: uppercase;
 				  	}
@@ -828,7 +840,10 @@ input#adi_prd {
 				  .js_remove {
 				  	a {
 					    color: $alert-color;
-					    font-size: .85rem;
+					    font-size: .7rem;
+              @include breakpoint(medium) {
+                font-size: .85rem;
+              }
 					  }
 				  }
 				}
@@ -841,13 +856,21 @@ input#adi_prd {
 				  		color:$white;
 				  	}
 				  }
+          &:nth-of-type(2) {
+            td:nth-of-type(4) {
+                min-width: rem-calc(80px);
+            }
+          }
 				}
 				tr.cart_head,
 				tr.cart_total {
 					background: $alert-color;
 					color: $white;				
 				  b{
+            padding:0;
+            @include breakpoint(medium) {
 				  	padding: 1rem 0;
+            }
 				  	display: block;
 				  }
 				}	
