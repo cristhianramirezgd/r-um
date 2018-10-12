@@ -135,3 +135,26 @@ div#quick_view_text {
             background:scale-color($alert-color, $lightness: -14%);
           }
     }
+// botton de vitrina global cambio de texto
+.button_prod_add:after {
+    content: 'Comprar';
+    font-size: .85rem;
+    padding: 0.85em 1em;
+    display: block;
+}
+
+.button_prod_add {
+    font-size: 0!important;
+}
+.dpr_suggested_price:before {
+    content: 'Antes:';
+    text-decoration: none!important;
+    padding-right: .5rem;
+}
+.dpr_suggested_price{
+  color:$medium-gray!important;
+  font-weight: 600!important;
+}
+main.product-um #addproductform .button_def {
+    font-size:1rem!important;
+}
