@@ -152,8 +152,13 @@ div#quick_view_text {
     padding-right: .5rem;
 }
 .dpr_suggested_price{
-  color:$medium-gray!important;
+  color:$dark-gray!important;
   font-weight: 600!important;
+}
+.button_def {
+  @include breakpoint(medium down){
+        width: 100%;
+  }
 }
 main.product-um #addproductform .button_def {
     font-size:1rem!important;

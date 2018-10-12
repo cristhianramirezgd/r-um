@@ -156,6 +156,9 @@ a.listname {
 			}
 			&>div {
 			  text-align: center;
+			  @include breakpoint(medium down) {
+					display: block;
+			  }
 			}
 			.dpr_listname{
 				text-align:center;
@@ -205,8 +208,9 @@ a.listname {
 			  }
 			}
 			.prod_compare {
-				font-size: .8rem;
+				font-size: .7rem;
 				@include breakpoint(medium) {
+				font-size: .85rem;
 			  	display: none;
 				}
 			}
@@ -214,6 +218,7 @@ a.listname {
 				margin-top:$global-margin;
 			  background: rgba($black,.8);
 			  color: $white;
+			  display:none;
 			}
 		}
 	}
@@ -242,12 +247,16 @@ a.listname {
 			        width:$size;
 			        font-size: .7rem;
 			        margin:0;
+					display: none;
+					@include breakpoint(medium) {
+						display:block;
+						margin-left: $global-margin;
+					}
 			      }
 			.button_def {
 				display: inline-block;
 				vertical-align: middle;
 				font-family: inherit;
-				padding: 0.85em 1em;
 				-webkit-appearance: none;
 				border: 1px solid transparent;
 				border-radius: 0.1875rem;
@@ -259,6 +268,10 @@ a.listname {
 				cursor: pointer;
 				background-color: $alert-color;
 				color: $white;
+				@include breakpoint(medium) {
+					padding: 0.85em $global-padding;
+					margin: 0;
+				}
 				&:hover{
 				  background:scale-color($alert-color, $lightness: -14%);
 				}
@@ -283,6 +296,12 @@ a.listname {
 		overflow: hidden;
 		line-height: 1.2;
 		text-transform: lowercase;
+		max-height: rem-calc(53px);
+		height: rem-calc(53px);
+		@include breakpoint(medium) {
+			max-height: initial;
+			height: initial;
+		}
 			&::first-letter{
 				text-transform: capitalize;
 			}
@@ -396,14 +415,16 @@ button.ui-dialog-titlebar-close {
 	.dpr_product-name{
 	  font-weight: 600;
 	  padding:0 $global-padding;
-	  border-left: 3px solid $alert-color;
-	  height: 41px;
-	  @include breakpoint(medium) {
-	  	height: 49px;
-	  }
+	  border-left: rem-calc(3px) solid $alert-color;
+	  max-height: rem-calc(47px);
+	  height: rem-calc(47px);
+	  font-size: .8rem;
 	  overflow: hidden;
 	  line-height: 1.2;
 	  text-transform: lowercase;
+	  @include breakpoint(medium) {
+	  	height: rem-calc(49px);
+	  }
 	  	&::first-letter{
 	  		text-transform: capitalize;
 	  	}
@@ -453,9 +474,11 @@ button.ui-dialog-titlebar-close {
 	        height: $size;
 	        width:$size;
 	        font-size: .7rem;
+	        display:none;
 	            @include breakpoint(medium) {
+	            	display: block;
 	            	margin:0 0 $global-margin;
-	        			opacity:0;
+	        		opacity:0;
 	            	transform: translatex(-130%);
 	            }
 	      }
@@ -463,10 +486,10 @@ button.ui-dialog-titlebar-close {
 	.dpr_product-list-add-button {
 				&::before {
 					transition: all 0.25s ease-out;
-				  content: 'Cant.';
 				  font-size: .8rem;
 				  font-weight: 100;
 				  @include breakpoint(medium) {
+				  	content: 'Cant.';
 				  	transform: translatex(-130%);
 				  	opacity: 0;
 				  }
@@ -501,11 +524,12 @@ button.ui-dialog-titlebar-close {
 	  }
 	  .prod_compare {
 	    padding:0 0 $global-padding;
-	    font-size: .8rem;
+	    font-size: .7rem;
 	    text-align:center;
 	    color:$dark-gray;
 	    @include breakpoint(medium) {
 	    	padding: 0 $global-padding*2 $global-padding/2 $global-padding*2;
+    		font-size: .85rem;
 	    }
 	    input {
 	            margin: 0;
@@ -724,12 +748,8 @@ button.ui-dialog-titlebar-close {
 }
 // producto del día
 .product-slide{
-
 	  background: $white;
-	  @include breakpoint(medium) {
 	  margin-bottom:$global-margin;
-	}
-
 	.dpr_container {
 		position:relative;
 		& > a {
@@ -738,9 +758,9 @@ button.ui-dialog-titlebar-close {
 			  align-items: center;
 			  .dpr_imagen_thumb {
 						img{
-							max-width: 80px;
+							max-width: rem-calc(80px);
 							@include breakpoint(medium) {
-							  	  max-width:120px;
+							  	  max-width:rem-calc(120px);
 							  	}
 					}
 			  }
@@ -780,7 +800,7 @@ button.ui-dialog-titlebar-close {
 	  background:$warning-color;
 	  	@include breakpoint(medium) {
 	  	position: relative;
-	  border-radius: rem-calc(10px) 0 0 rem-calc(10px);
+	  	border-radius: rem-calc(10px) 0 0 rem-calc(10px);
 	  	&::after {
 	  		  	$size:rem-calc(30px);
 	  			  content: '';
@@ -810,7 +830,9 @@ button.ui-dialog-titlebar-close {
 	.dpr_product-name {
 	  color: $dark-gray;
 	  font-weight: 900;
+	  font-size: .85rem;
 	  @include breakpoint (medium) {
+	 	font-size: 1rem;
 	  	padding: $global-padding;
 	  }
 	}
