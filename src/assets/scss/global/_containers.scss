@@ -149,14 +149,14 @@ a.listname {
 			min-height: rem-calc(260px);
 			overflow: hidden;
 			transition:all 90ms ease-in;
-			@include breakpoint(medium down) {
+			@media screen and (max-width: 40em) { 
 				background: $white;
 				margin-bottom: $global-margin;
 				border: 1px solid $light-gray;
 			}
 			&>div {
 			  text-align: center;
-			  @include breakpoint(medium down) {
+			  @media screen and (max-width: 40em) { 
 					display: block;
 			  }
 			}

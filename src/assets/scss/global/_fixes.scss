@@ -171,3 +171,13 @@ main.product-um #addproductform .button_def {
     padding: rem-calc(1px);
   }
 }
+// form wanto sell
+.form-wanto form>p {
+    display: none;
+}
+.form-wanto h1{
+    font-size:0;
+}
+.form-wanto ul{
+    list-style:none;
+}
