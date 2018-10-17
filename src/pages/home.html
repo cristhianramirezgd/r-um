@@ -1,0 +1,96 @@
+<main class="home_um">
+  <h1 style="display:none;">universomascotas.co</h1>
+  <section class="grid-container full">
+    <!-- <div class="grid-container"> -->
+      [[home_banners]] 
+    <!-- </div> -->
+  </section>
+  <section class="grid-container full">
+  	<div class="grid-container" id="maincontent">
+      <div class="small-12 top-brand-title">
+        <h2 class="h6 text-alert"><i class="fas fa-certificate"></i> Marcas top</h2>
+      </div>
+      <div class="small-12 top-brand-carousel">
+  		  [[carrousel(3)]]
+      </div>
+  	</div>
+  </section>
+  <section class="grid-container grid-x align-middle banner-one">
+    <div class="small-12 medium-4 show-for-medium">
+      [[carrousel(1)]]
+    </div>
+    <div class="small-12 medium-4 hide-for-medium">
+      [[carrousel(4)]]
+    </div>
+    <div class="group-home small-12 medium-8">
+      [[grupo(7|6|3)]]
+    </div>
+  </section>
+  <section class="grid-container full grid-x circle-button show-for-medium">
+    <div class="banner-home-middle">
+      [[home_banners_small]]
+    </div>
+    <div class="buttons-middle-banner grid-x grid-margin-x">
+      <!-- <div class="small-12">Encuentralo en</div> -->
+      <div class="cell small-12 medium-offset-4 medium-2"><a href="/c/perros/juguetes/" class="button hollow white-button expanded">Divierte a tu peludo</a></div>
+      <div class="cell small-12 medium-2"><a href="/c/gatos/juguetes/" class="button hollow white-button expanded">Divierte a tu felino</a></div>
+    </div>
+  </section>
+  <section class="grid-container grid-x align-middle banner-two">
+    <div class="small-12 medium-4 show-for-medium">
+      [[carrousel(2)]]
+    </div>
+    <div class="small-12 medium-4 hide-for-medium">
+      [[carrousel(5)]]
+    </div>
+    <div class="group-home small-12 medium-8">
+      [[grupo(8|6|3)]]
+    </div>
+  </section>
+  <!-- <section class="">
+    <div class="grid-container grid-x">
+      <div class="small-12">
+        <h4 class="text-center">Bienestar para tu mascotas</h4>
+        <p class="text-center">Mantente al día contoda la información que nuestros especialistar traen para tí</p>
+      </div>
+      <article class="small-12"></article>
+    </div>
+  </section> -->
+</main>    
+<script type="text/javascript">
+  $('#carrousel_3').slick({
+      infinite: true,
+      arrows: true,
+      nextArrow: '<i class="fas fa-chevron-right slick-next"></i>',
+      prevArrow: '<i class="fas fa-chevron-left slick-prev"></i>',
+      slidesToShow:8,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 7000,
+      lazyLoad: 'ondemand',
+      dots: false,
+      responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 6 
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          }
+        ]
+  });
+</script>
+
+
+
