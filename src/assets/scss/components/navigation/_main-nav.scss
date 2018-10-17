@@ -33,8 +33,35 @@ $app-dashboard-top-nav-height: rem-calc(55);
 .vertical-menu-um{
 	position:relative;
 }
+// tel animation
+@keyframes ring {
+    0% {transform: rotate(0deg);background:$white;color:$black;}
+    25% {transform: rotate(20deg);background:$success-color;color:$white;}
+    75% {transform: rotate(0deg);background:$white;color:$black;}
+    100% {transform: rotate(20deg);background:$success-color;color:$white;}
+}
+@keyframes ringtel {
+    0% {color:$warning-color;}
+    25% {color:$dark-gray;}
+    75% {color:$warning-color;}
+    100% {color:$dark-gray;}
+}
+.tel-animation i{
+	animation-name: ring;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	border-radius: 100%;
+}
+.tel-animation small b{
+	animation-name: ringtel;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	border-radius: 100%;
+}
 //responsive clases hamburguer menu
-@include breakpoint(medium down) { 
+@media screen and (max-width: 40em) { 
 	.hamburguer-icon-um {
 	  position: relative;
 	  left: 0.46875rem;
