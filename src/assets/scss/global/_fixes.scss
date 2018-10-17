@@ -181,3 +181,18 @@ main.product-um #addproductform .button_def {
 .form-wanto ul{
     list-style:none;
 }
+// carousel payu
+.pay-method-wraper {
+    margin: 1rem auto;
+}
+.pay-carousel{
+  margin:0;
+}
+ul.pay-carousel >div>div {
+    display: flex;
+    align-items: center;
+}
+
+ul.pay-carousel li {
+    padding: 0 $global-padding/2;
+}

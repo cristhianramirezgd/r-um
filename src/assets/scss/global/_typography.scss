@@ -6,7 +6,7 @@
 	&-alert{color:$alert-color;}
 	&-light-gray{color:$light-gray;}
 	&-medium-gray{color:$medium-gray;}
-	&-dark-gray{color:$dark-gray;}
+	&-dark-gray{color:$dark-gray!important;}
 	&-black{color:$black;}
 	&-white{color:$white!important;}
 }
