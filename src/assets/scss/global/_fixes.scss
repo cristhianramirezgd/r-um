@@ -195,4 +195,17 @@ ul.pay-carousel >div>div {
 
 ul.pay-carousel li {
     padding: 0 $global-padding/2;
+    max-width: rem-calc(80px);
+    img {
+    	transition: all 0.25s ease-out;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      max-height: rem-calc(30px);
+      margin: $global-margin auto;
+      &:hover{
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+
+      }
+    }
 }
