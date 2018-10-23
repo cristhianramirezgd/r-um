@@ -1267,7 +1267,7 @@ div#steps_checkout_info .step_resaltado {
       }
   }
 }
-// Input pay cjheckout
+// Input pay checkout
 .input-pay-um{
  #order_details {
   table{
@@ -1610,9 +1610,24 @@ div#steps_checkout_info .step_resaltado {
         #cho_pay_meth_cc_installments #installments {
           width: 95px
         }
-
+        #div_error {
+            background: scale-color($alert-color, $lightness: -15%);
+            height: auto!important;
+            color: $white;
+            .titulo_mensaje_error,
+            .contenido_mensaje_error{
+              padding: $global-padding/2 $global-padding/2 0;
+            }
+        }
+        input#accept_terms {
+            margin: 0;
+        }
+        #cho_pay_meth_desc_bankreferenced,
+        #cho_pay_meth_desc_efecty,
+        #cho_pay_meth_desc_baloto,
         #cho_pay_meth_desc_pse {
-          margin-bottom: 10px
+          margin-bottom: $global-margin;
+          font-size:.85rem;
         }
 
         #discount_name {
@@ -1624,13 +1639,24 @@ div#steps_checkout_info .step_resaltado {
           width: 350px;
           text-transform: uppercase
         }
-
+        #co_pay_pend_payment{
+          background: scale-color($alert-color, $lightness: -15%);
+          color:$white;
+          padding:$global-padding;
+          .titulo_mensaje_error{
+            font-weight: 800;
+          }
+          .contenido_mensaje_error{
+            font-size: .85rem;
+          }
+        }
         #payment_terms_conditions {
           padding: $global-padding;
           text-align: right;
           padding: $global-padding/2;
           text-align: right;
           font-size: .85rem;
+          font-weight: 900;
           a {
              color: $alert-color;
            }

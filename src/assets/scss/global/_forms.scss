@@ -126,8 +126,22 @@
   background: $white;
   box-shadow: 0px 1px 3px rgba($black,.2);
 }
-// Newsleter form
+// NEWSLETER FORM
 .newsletterform{
+	.success_div{}
+	.formulario{
+		.ul_formulario{
+			#li_forma_1{}
+			#li_forma_2{}
+			#li_forma_4{}
+			.li_forma{
+				.label-captcha{}
+			}
+			.li_last{}
+			.error_box{}
+		}
+	}
+
 		#successDiv_1{
 			color:$success-color;
 			font-size: 1.3rem;
