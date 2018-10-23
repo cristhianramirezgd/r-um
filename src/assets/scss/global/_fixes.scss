@@ -193,9 +193,7 @@ ul.pay-carousel >div>div {
     align-items: center;
 }
 
-ul.pay-carousel li {
-    padding: 0 $global-padding/2;
-    max-width: rem-calc(80px);
+.pay-carousel> div {
     img {
     	transition: all 0.25s ease-out;
       -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
