@@ -35,7 +35,7 @@
 }
 .navigation-category-um{
     @include breakpoint(medium) {
-    	padding:$global-padding;
+    	padding:$global-padding/2;
     }
 }
 // component autocomplete search

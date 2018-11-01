@@ -536,6 +536,19 @@ button.ui-dialog-titlebar-close {
 	          }
 	  }
 }
+// banner catogories
+.category-sales{
+	#tpl_top_banner_div {
+		img {
+			    max-height: 190px;
+			}
+	}
+}
+.slider-category-promo{
+	@include breakpoint(medium) {
+		margin-top:$global-padding/2;
+	}
+}
 // category filters
 .title-filtros p,
 .use-filters #your_filters,
@@ -685,6 +698,7 @@ button.ui-dialog-titlebar-close {
 #tpl_sort_by {
   position:relative;
   @include breakpoint(medium) {
+  	display:flex;
     select{
   	width: 40%;
     }
@@ -709,13 +723,12 @@ button.ui-dialog-titlebar-close {
   		}
     }
     select{
+    	margin:0!important;
       @include breakpoint(medium) {
         width:auto;
-        position: absolute;
         top: 100%;
         z-index: 9;
         right: 0;
-        display:none;
       }
     }
 }
