@@ -56,6 +56,12 @@ table.container_table tbody {
     width: 100%;
     display: inline-block;
 }
+#carrousel_1,
+#carrousel_2{
+  img{
+    max-height: rem-calc(500px);
+  }
+}
 .specs_title_select {
     font-size:0;
 }
