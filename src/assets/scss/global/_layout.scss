@@ -1491,14 +1491,14 @@ div#steps_checkout_info .step_resaltado {
 
         #payment_methods_content .tabs {
           position: relative;
-          min-height: 270px;
+          min-height: rem-calc(400px);
           clear: both
         }
 
         #payment_methods_content .tab {
         	width:100%;
           @include breakpoint(medium) {
-          	width: 300px
+          	width: rem-calc(300px)
           }
         }
 
